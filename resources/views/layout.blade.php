@@ -49,10 +49,8 @@
 </head>
 
 <body>
-    <div id="react-announcement-bar"></div>
-
-    <!-- ======= Header ======= -->
-    <header id="header" class="header d-flex align-items-center" data-aos="fade-down" data-aos-delay="100">
+    <!-- ======= Header (Fixed Permanently) ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
             <a href="/" class="logo d-flex align-items-center gap-2 text-decoration-none">

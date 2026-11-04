@@ -4,12 +4,25 @@
 @section('slider')
     <!-- ======= Modern Hero Section (Himastat-Inspired FMIPA Dark & Yellow) ======= -->
     <section id="hero" class="hero position-relative overflow-hidden" 
-             style="background: radial-gradient(ellipse 80% 60% at 50% 10%, rgba(255, 255, 0, 0.12) 0%, rgba(5, 5, 5, 0.96) 65%, #000000 100%); min-height: 88vh; display: flex; align-items: center;">
+             style="min-height: 88vh; display: flex; align-items: center; background-color: #09090b;">
         <div id="hero-carousel" class="carousel slide carousel-fade w-100" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators" style="bottom: 48px; z-index: 10;">
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 24px; height: 4px; background-color: #FFE500; border: none; border-radius: 2px;"></button>
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2" style="width: 24px; height: 4px; background-color: #FFE500; border: none; border-radius: 2px;"></button>
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3" style="width: 24px; height: 4px; background-color: #FFE500; border: none; border-radius: 2px;"></button>
+            </div>
+
+            <div class="carousel-inner" style="min-height: 88vh;">
                 <!-- Slide 1: Primary BEM FMIPA Slide -->
-                <div class="carousel-item active Maincarousel" style="background-image: url('{{ asset('assets/img/slide/pengurus2025.jpg') }}'); min-height: 88vh;">
-                    <div class="info d-flex align-items-center" style="background: radial-gradient(circle at center, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.95) 100%); min-height: 88vh;">
+                <div class="carousel-item active position-relative" style="min-height: 88vh;">
+                    <img src="{{ asset('assets/img/slide/pengurus2026.JPG') }}" 
+                         alt="Pengurus BEM FMIPA Unhas 2026" 
+                         class="position-absolute top-0 start-0 w-100 h-100" 
+                         style="object-fit: cover; object-position: center; z-index: 1;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100" 
+                         style="background: linear-gradient(180deg, rgba(9, 9, 11, 0.45) 0%, rgba(9, 9, 11, 0.78) 100%); z-index: 2;"></div>
+                    <div class="info d-flex align-items-center position-relative" style="min-height: 88vh; z-index: 3;">
                         <div class="container">
                             <div class="row justify-content-center text-center">
                                 <div class="col-lg-10">
@@ -52,11 +65,119 @@
                     </div>
                 </div>
 
+                <!-- Slide 2: Kolaborasi & Sinergi -->
+                <div class="carousel-item position-relative" style="min-height: 88vh;">
+                    <img src="{{ asset('assets/img/slide/pengurus20261.JPG') }}" 
+                         alt="Pengurus BEM FMIPA Unhas 2026" 
+                         class="position-absolute top-0 start-0 w-100 h-100" 
+                         style="object-fit: cover; object-position: center; z-index: 1;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100" 
+                         style="background: linear-gradient(180deg, rgba(9, 9, 11, 0.45) 0%, rgba(9, 9, 11, 0.78) 100%); z-index: 2;"></div>
+                    <div class="info d-flex align-items-center position-relative" style="min-height: 88vh; z-index: 3;">
+                        <div class="container">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-lg-10">
+                                    <div class="fmipa-badge mb-3">
+                                        <span class="fmipa-badge-dot"></span>
+                                        Badan Eksekutif Mahasiswa FMIPA Unhas
+                                    </div>
+
+                                    <h2 class="display-3 text-white mb-3" style="font-weight: 900; letter-spacing: -1.5px; line-height: 1.15;">
+                                        Kolaborasi Inklusif, Melangkah <span style="color: #FFE500;">Bersama Mahasiswa</span>
+                                    </h2>
+
+                                    <p class="lead text-light mb-4 mx-auto" style="max-width: 760px; font-size: 17px; line-height: 1.8; color: #d1d5db !important;">
+                                        Menghubungkan sinergi riset, kepedulian sosial, serta aspirasi seluruh departemen sains demi kemajuan dan martabat sivitas akademika FMIPA Unhas.
+                                    </p>
+
+                                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                                        <a href="#bidang-showcase" class="fmipa-btn-primary">
+                                            <span>Jelajahi Struktur Bidang</span>
+                                        </a>
+
+                                        <a href="#sambutan-ketua" class="fmipa-btn-outline">
+                                            <span>Sambutan Ketua</span>
+                                        </a>
+
+                                        <a href="#visi-misi" class="fmipa-btn-outline">
+                                            <span>Visi & Misi</span>
+                                        </a>
+
+                                        @auth
+                                            <a href="/carousels" class="btn btn-dark px-3 py-2 fw-bold"
+                                               style="border: 1px solid #27272a; border-radius: 4px; color: #FFE500; font-size: 13px;">
+                                                <i class="bi bi-gear-fill me-1"></i> Kelola Banner
+                                            </a>
+                                        @endauth
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Integritas & Kepemimpinan -->
+                <div class="carousel-item position-relative" style="min-height: 88vh;">
+                    <img src="{{ asset('assets/img/slide/pengurus20262.JPG') }}" 
+                         alt="Pengurus BEM FMIPA Unhas 2026" 
+                         class="position-absolute top-0 start-0 w-100 h-100" 
+                         style="object-fit: cover; object-position: center; z-index: 1;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100" 
+                         style="background: linear-gradient(180deg, rgba(9, 9, 11, 0.45) 0%, rgba(9, 9, 11, 0.78) 100%); z-index: 2;"></div>
+                    <div class="info d-flex align-items-center position-relative" style="min-height: 88vh; z-index: 3;">
+                        <div class="container">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-lg-10">
+                                    <div class="fmipa-badge mb-3">
+                                        <span class="fmipa-badge-dot"></span>
+                                        Badan Eksekutif Mahasiswa FMIPA Unhas
+                                    </div>
+
+                                    <h2 class="display-3 text-white mb-3" style="font-weight: 900; letter-spacing: -1.5px; line-height: 1.15;">
+                                        Integritas Saintis, Memimpin <span style="color: #FFE500;">Perubahan Nyata</span>
+                                    </h2>
+
+                                    <p class="lead text-light mb-4 mx-auto" style="max-width: 760px; font-size: 17px; line-height: 1.8; color: #d1d5db !important;">
+                                        Menjadi episentrum kepemimpinan mahasiswa yang berdaya saing global dengan berlandaskan nilai-nilai nalar ilmiah, moralitas, dan keadilan sosial.
+                                    </p>
+
+                                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                                        <a href="#bidang-showcase" class="fmipa-btn-primary">
+                                            <span>Jelajahi Struktur Bidang</span>
+                                        </a>
+
+                                        <a href="#sambutan-ketua" class="fmipa-btn-outline">
+                                            <span>Sambutan Ketua</span>
+                                        </a>
+
+                                        <a href="#visi-misi" class="fmipa-btn-outline">
+                                            <span>Visi & Misi</span>
+                                        </a>
+
+                                        @auth
+                                            <a href="/carousels" class="btn btn-dark px-3 py-2 fw-bold"
+                                               style="border: 1px solid #27272a; border-radius: 4px; color: #FFE500; font-size: 13px;">
+                                                <i class="bi bi-gear-fill me-1"></i> Kelola Banner
+                                            </a>
+                                        @endauth
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Dynamic Carousels from Database -->
                 @foreach ($carousels as $carousel)
                     @if ($carousel->jenis_corcel === 'biasa')
-                        <div class="carousel-item Maincarousel" style="background-image: url('{{ asset($carousel->gambar_path) }}'); min-height: 88vh;">
-                            <div class="info d-flex align-items-center" style="background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.94) 100%); min-height: 88vh;">
+                        <div class="carousel-item position-relative" style="min-height: 88vh;">
+                            <img src="{{ asset($carousel->gambar_path) }}" 
+                                 alt="{{ $carousel->judul }}" 
+                                 class="position-absolute top-0 start-0 w-100 h-100" 
+                                 style="object-fit: cover; object-position: center; z-index: 1;">
+                            <div class="position-absolute top-0 start-0 w-100 h-100" 
+                                 style="background: linear-gradient(180deg, rgba(9, 9, 11, 0.45) 0%, rgba(9, 9, 11, 0.78) 100%); z-index: 2;"></div>
+                            <div class="info d-flex align-items-center position-relative" style="min-height: 88vh; z-index: 3;">
                                 <div class="container">
                                     <div class="row justify-content-center text-center">
                                         <div class="col-lg-8">
@@ -223,21 +344,21 @@
                     <div class="row align-items-center gy-4">
                         <div class="col-lg-4 text-center">
                             <div class="sambutan-photo-frame mx-auto" style="max-width: 280px; border-radius: 4px; border: 1px solid #27272a;">
-                                <img src="{{ asset('assets/img/slide/pengurus2025.jpg') }}" alt="Ketua Umum BEM FMIPA Unhas" class="img-fluid" style="width: 100%; height: 320px; object-fit: cover;">
+                                <img src="{{ asset('assets/img/ketuaumum.jpg') }}" alt="Ketua Umum BEM FMIPA Unhas" class="img-fluid" style="width: 100%; height: 320px; object-fit: cover;">
                             </div>
                             <div class="mt-3">
                                 <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em;">
                                     KETUA UMUM BEM FMIPA UNHAS
                                 </span>
-                                <h5 class="text-white fw-bold mt-2 mb-0" style="font-size: 15px;">Kabinet Transformasi Saintis</h5>
-                                <small style="color: #71717a; font-size: 12px;">Periode 2025 / 2026</small>
+                                <h5 class="text-white fw-bold mt-2 mb-0" style="font-size: 15px;">Adrian Tri Saputra</h5>
+                                <small style="color: #71717a; font-size: 12px;">Periode 2026</small>
                             </div>
                         </div>
 
                         <div class="col-lg-8 ps-lg-4">
                             <div>
                                 <span style="font-size: 11px; font-weight: 700; color: #FFE500; text-transform: uppercase; letter-spacing: 0.08em;">
-                                    Sambutan Kepemimpinan
+                                    Sambutan Ketua Umum BEM FMIPA Unhas
                                 </span>
                                 <h2 class="fw-bold text-white mb-3" style="font-size: 1.85rem; line-height: 1.3;">
                                     Satukan Nalar, Melangkah Nyata untuk <span style="color: #FFE500;">Kejayaan FMIPA Unhas</span>
@@ -250,11 +371,11 @@
                                 </p>
                                 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top mt-3" style="border-color: #1f1f23 !important;">
                                     <div>
-                                        <div class="text-white fw-bold" style="font-size: 13.5px;">Dewan Pengurus BEM FMIPA Unhas</div>
+                                        <div class="text-white fw-bold" style="font-size: 13.5px;">BEM FMIPA UNHAS PERIODE 2026</div>
                                         <small style="color: #71717a;">Universitas Hasanuddin, Makassar</small>
                                     </div>
                                     <a href="/about/inti" class="btn btn-outline-warning" style="font-size: 12.5px; padding: 6px 14px;">
-                                        Lihat Pengurus Inti →
+                                        Lihat Pengurus →
                                     </a>
                                 </div>
                             </div>

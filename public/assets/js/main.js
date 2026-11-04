@@ -240,21 +240,8 @@ document.addEventListener("DOMContentLoaded", () => {
         aos_init();
     });
 });
-//Hide Navbar on Scroll
-var prevScrollPos = window.pageYOffset;
-var header = document.querySelector(".header");
-
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-
-    if (prevScrollPos > currentScrollPos) {
-        header.style.marginTop = "1rem";
-    } else {
-        header.style.marginTop = "-" + header.offsetHeight + "px";
-    }
-
-    prevScrollPos = currentScrollPos;
-};
+// Header remains fixed permanently at the top (no hide on scroll)
+// window.onscroll hide logic removed to keep header fixed
 
 // Variabel untuk menyimpan ukuran font awal
 var ukuranFontAwal = 26;

@@ -2,7 +2,7 @@ import './bootstrap';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import BemAnnouncementBar from './components/BemAnnouncementBar';
+// import BemAnnouncementBar from './components/BemAnnouncementBar';
 import HeroStatsCounter from './components/HeroStatsCounter';
 import DynamicBidangShowcase from './components/DynamicBidangShowcase';
 import QuickAgendaFeed from './components/QuickAgendaFeed';
@@ -11,10 +11,10 @@ import QuickAspirasiWidget from './components/QuickAspirasiWidget';
 
 // Auto-mount React components to matching element IDs in Blade templates
 
-const announcementContainer = document.getElementById('react-announcement-bar');
-if (announcementContainer) {
-    createRoot(announcementContainer).render(<BemAnnouncementBar />);
-}
+// const announcementContainer = document.getElementById('react-announcement-bar');
+// if (announcementContainer) {
+//     createRoot(announcementContainer).render(<BemAnnouncementBar />);
+// }
 
 const heroStatsContainer = document.getElementById('react-hero-stats');
 if (heroStatsContainer) {

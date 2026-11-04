@@ -318,12 +318,15 @@ section {
 # Header
 --------------------------------------------------------------*/
 .header {
-    z-index: 997;
-    position: absolute;
-    padding: 30px 0;
-    top: 0;
-    left: 0;
-    right: 0;
+    z-index: 1030;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    padding: 0.75rem 2rem;
+    background: #09090b;
+    border-bottom: 1px solid #27272a;
 }
 
 .header .logo img {
@@ -386,9 +389,8 @@ section {
     }
 
     .header:hover {
-        transform: translateY(-2px);
         box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.95),
-                    0 4px 20px 0 rgba(255, 255, 0, 0.3);
+                    0 4px 20px 0 rgba(255, 229, 0, 0.3);
     }
     .navbar {
         padding: 0;
