@@ -1,0 +1,168 @@
+/* ==========================================================================
+   📋 BEM FMIPA UNHAS - PROGRAM KERJA STYLES (ANTI-SLOP UTILITARIAN THEME)
+   Primary Palette: #FFE500 (Kuning FMIPA) & #09090b (Hitam Obsidian)
+   Border: 1px solid #27272a, Radius: 4px
+   ========================================================================== */
+
+.program-section {
+    padding: 2.5rem 0;
+    margin: 1rem 0 2rem;
+}
+
+/* Program Item Card (Utilitarian 1px solid border, 4px radius) */
+.program-item {
+    background: #111115;
+    border: 1px solid #27272a;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: border-color 140ms ease-out, transform 140ms ease-out;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.program-item:hover {
+    transform: translateY(-2px);
+    border-color: #FFE500;
+}
+
+/* Photo Section */
+.program-photo {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    background-color: #09090b;
+    border-bottom: 1px solid #27272a;
+}
+
+.program-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 140ms ease-out;
+}
+
+/* Program Info */
+.program-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #111115;
+}
+
+.program-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fafafa;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.02em;
+}
+
+.program-subtitle {
+    color: #a1a1aa;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Direct Program Details (Visible upfront for fast scanning, no hidden accordion) */
+.program-detail {
+    display: block !important;
+    margin-top: 0.8rem;
+    padding-top: 1rem;
+    border-top: 1px solid #27272a;
+    text-align: left;
+    width: 100%;
+}
+
+.detail-content {
+    background: #0d0d10;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #27272a;
+    border-left: 3px solid #FFE500;
+}
+
+/* Tujuan & Sasaran Section */
+.tujuan, .sasaran {
+    margin-bottom: 1rem;
+}
+
+.sasaran {
+    margin-bottom: 0;
+}
+
+.tujuan h5, .sasaran h5 {
+    color: #FFE500;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.tujuan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tujuan li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+    color: #d4d4d8;
+    font-size: 0.88rem;
+}
+
+.tujuan li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FFE500;
+    font-weight: bold;
+}
+
+.sasaran p {
+    background: #111115;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin: 0;
+    color: #d4d4d8;
+    border: 1px solid #27272a;
+    font-size: 0.88rem;
+}
+
+/* Detail Button (Hidden because data is visible upfront) */
+.btn-detail {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .program-section {
+        padding: 1.5rem 0;
+    }
+    
+    .program-photo {
+        height: 200px;
+    }
+    
+    .program-info {
+        padding: 1.2rem;
+    }
+    
+    .program-title {
+        font-size: 1.15rem;
+    }
+    
+    .detail-content {
+        padding: 0.85rem;
+    }
+}

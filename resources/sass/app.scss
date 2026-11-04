@@ -1,0 +1,336 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+/* ========================================================
+   BEM FMIPA UNHAS - ANTI-SLOP DESIGN SYSTEM
+   Principles: Utilitarian, High Contrast, 1px Solid Borders,
+   Zero Non-functional Blur/Glow, Fast State Transitions.
+   ======================================================== */
+
+:root {
+    --color-primary: #FFE500;
+    --color-primary-hover: #FFD000;
+    --color-bg-base: #09090b;
+    --color-bg-surface: #111115;
+    --color-bg-elevated: #18181c;
+    --color-border: #27272a;
+    --color-border-subtle: #1f1f23;
+    --color-border-contrast: #3f3f46;
+    
+    --color-text-main: #fafafa;
+    --color-text-secondary: #a1a1aa;
+    --color-text-muted: #71717a;
+
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 6px;
+
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --transition-fast: 140ms ease-out;
+}
+
+/* Base Reset & Background */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-base) !important;
+    color: var(--color-text-main) !important;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilitarian Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
+
+::selection {
+    background-color: #FFE500;
+    color: #000000;
+}
+
+/* Sections & Surfaces */
+section, main {
+    background-color: var(--color-bg-base) !important;
+    color: var(--color-text-main);
+    position: relative;
+}
+
+.section-alt {
+    background-color: var(--color-bg-surface) !important;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-main);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+
+p {
+    color: var(--color-text-secondary);
+}
+
+.text-muted {
+    color: var(--color-text-muted) !important;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Solid Navbar (No Glassmorphism, 1px Border) */
+.header {
+    background: #09090b !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    padding: 12px 0;
+}
+
+.navbar a, .navbar a:focus {
+    color: var(--color-text-secondary) !important;
+    font-weight: 600;
+    font-size: 13.5px;
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.navbar a:hover, .navbar .active, .navbar li:hover > a {
+    color: #ffffff !important;
+    background-color: #18181c;
+}
+
+.navbar .dropdown ul {
+    background-color: #111115 !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+    padding: 6px;
+}
+
+.navbar .dropdown ul a {
+    color: var(--color-text-secondary) !important;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: var(--radius-sm);
+}
+
+.navbar .dropdown ul a:hover {
+    color: #000000 !important;
+    background-color: #FFE500 !important;
+    font-weight: 600;
+}
+
+/* Functional Buttons (Strict 4px Radius, Solid High-Contrast, No Neon Glow) */
+.btn {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 13.5px;
+    border-radius: var(--radius-md) !important;
+    padding: 8px 16px;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-primary, .btn-warning, .btn-fmipa-solid {
+    background-color: #FFE500 !important;
+    color: #000000 !important;
+    border: 1px solid #FFE500 !important;
+}
+
+.btn-primary:hover, .btn-warning:hover, .btn-fmipa-solid:hover {
+    background-color: #FFD000 !important;
+    border-color: #FFD000 !important;
+    color: #000000 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-outline-primary, .btn-outline-warning, .btn-fmipa-outline {
+    background-color: transparent !important;
+    color: #FFE500 !important;
+    border: 1px solid var(--color-border-contrast) !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-warning:hover, .btn-fmipa-outline:hover {
+    background-color: #18181c !important;
+    border-color: #FFE500 !important;
+    color: #FFE500 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Utilitarian Cards (Flat, Crisp 1px Border, 6px Radius, No Float) */
+.fmipa-card, .card {
+    background-color: var(--color-bg-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: none !important;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.fmipa-card:hover, .card:hover {
+    border-color: var(--color-border-contrast) !important;
+    transform: none !important;
+}
+
+/* Tables (Utilitarian Data Scanning) */
+.table {
+    --bs-table-bg: transparent;
+    color: var(--color-text-main) !important;
+    border-color: var(--color-border) !important;
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #0d0d10 !important;
+    color: var(--color-text-secondary) !important;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-border) !important;
+    padding: 10px 14px;
+}
+
+.table td {
+    border-bottom: 1px solid var(--color-border) !important;
+    color: var(--color-text-secondary);
+    padding: 10px 14px;
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover td {
+    background-color: #141418 !important;
+    color: #ffffff;
+}
+
+/* Form Inputs (Solid, High-Contrast, Clean 4px Radius) */
+.form-control, .form-select, .fmipa-input {
+    background-color: #0e0e11 !important;
+    color: #ffffff !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-md) !important;
+    font-size: 13.5px !important;
+    padding: 8px 12px !important;
+    transition: border-color var(--transition-fast);
+}
+
+.form-control:focus, .form-select:focus, .fmipa-input:focus {
+    background-color: #121216 !important;
+    border-color: #FFE500 !important;
+    box-shadow: 0 0 0 1px #FFE500 !important;
+    outline: none !important;
+}
+
+.form-control::placeholder, .fmipa-input::placeholder {
+    color: var(--color-text-muted) !important;
+}
+
+/* Utilitarian Badge */
+.badge, .fmipa-tag {
+    font-weight: 600;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.02em;
+}
+
+.tag-neutral {
+    background-color: #18181c;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.tag-accent {
+    background-color: #1c1a00;
+    color: #FFE500;
+    border: 1px solid rgba(255, 229, 0, 0.3);
+}
+
+/* Footer (Utilitarian & Structured) */
+.footer {
+    background-color: #09090b !important;
+    border-top: 1px solid var(--color-border) !important;
+    padding: 48px 0 24px;
+}
+
+.footer h4 {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.footer a {
+    color: var(--color-text-muted);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer a:hover {
+    color: #FFE500;
+}
+
+/* Agenda Responsive Reflow (Anti-Slop R-03) */
+.fmipa-agenda-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: start;
+    background-color: #111115;
+    border: 1px solid #27272a;
+    border-radius: 4px;
+    padding: 14px 18px;
+    transition: border-color 140ms ease-out;
+
+    @media (min-width: 640px) {
+        grid-template-columns: 140px 1fr auto;
+        gap: 16px;
+        align-items: center;
+    }
+
+    &:hover {
+        border-color: #3f3f46;
+    }
+}
