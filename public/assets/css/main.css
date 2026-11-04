@@ -237,8 +237,8 @@ section {
     bottom: 20px;
     z-index: 99999;
     background: #FFE500 !important;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -755,22 +755,20 @@ section {
         width: 28px;
         height: 3px;
         border-radius: 3px;
-        box-shadow: 0 0 8px rgba(255, 229, 0, 0.4);
-        transition: all 0.4s ease;
+        transition: all 0.2s ease;
     }
 
     .humburger:hover span {
         background-color: #FFFFFF;
-        box-shadow: 0 0 10px #FFFFFF;
     }
 
     .humburger input {
         position: absolute;
-        width: 32px;
-        height: 24px;
+        width: 44px;
+        height: 44px;
         opacity: 0;
-        left: -2px;
-        top: -1px;
+        left: -8px;
+        top: -11px;
         cursor: pointer;
         z-index: 3;
     }
@@ -794,7 +792,7 @@ section {
     .navbar .login-btn,
     .navbar .register-btn {
         padding: 12px 20px !important;
-        border-radius: 50px !important;
+        border-radius: 4px !important;
         font-weight: 800 !important;
         font-size: 13.5px !important;
         text-transform: uppercase !important;
@@ -2867,6 +2865,8 @@ section {
 
 .blog .sidebar .search-form form input[type="text"]:focus {
     outline: none;
+    border-color: #FFE500 !important;
+    box-shadow: 0 0 0 1px #FFE500 !important;
 }
 
 .blog .sidebar .search-form form button {
@@ -3393,6 +3393,8 @@ section {
 
 .sidebars .search-form form input[type="text"]:focus {
     outline: none;
+    border-color: #FFE500 !important;
+    box-shadow: 0 0 0 1px #FFE500 !important;
 }
 
 .sidebars .search-form form button {
@@ -4291,7 +4293,15 @@ section {
 }
 
 .fmipa-input::placeholder {
-    color: #71717a !important;
+    color: #a1a1aa !important;
+}
+
+/* Global Interactive Affordances (Anti-Slop R-39) */
+a[href], button, summary, select, label[for], input[type="checkbox"], input[type="radio"], [role="button"], [role="tab"] {
+    cursor: pointer;
+}
+:disabled, [aria-disabled="true"] {
+    cursor: not-allowed;
 }
 
 /* ==========================================================================

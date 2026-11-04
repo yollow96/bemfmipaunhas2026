@@ -106,16 +106,16 @@
                         <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
                                 <img src="{{ $item->foto ? asset($item->foto) : asset('assets/img/default.jpg') }}"
-                                    class="img-fluid" alt="{{ $item->nama }}">
+                                    class="img-fluid" width="360" height="420" alt="{{ $item->nama }}">
                                 <div class="social">
                                     @if($item->twitter)
-                                        <a href="{{ $item->twitter }}" target="_blank"><i class="bi bi-twitter"></i></a>
+                                        <a href="{{ $item->twitter }}" target="_blank" aria-label="Twitter {{ $item->nama }}"><i class="bi bi-twitter" aria-hidden="true"></i></a>
                                     @endif
                                     @if($item->instagram)
-                                        <a href="{{ $item->instagram }}" target="_blank"><i class="bi bi-instagram"></i></a>
+                                        <a href="{{ $item->instagram }}" target="_blank" aria-label="Instagram {{ $item->nama }}"><i class="bi bi-instagram" aria-hidden="true"></i></a>
                                     @endif
                                     @if($item->facebook)
-                                        <a href="{{ $item->facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+                                        <a href="{{ $item->facebook }}" target="_blank" aria-label="Facebook {{ $item->nama }}"><i class="bi bi-facebook" aria-hidden="true"></i></a>
                                     @endif
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                         </div>
                     @empty
                         <div class="col-12 text-center text-muted py-4">
-                            <p style="color: #71717a;">Data kepengurusan Bidang Hubungan Masyarakat Periode 2026 sedang dalam proses sinkronisasi.</p>
+                            <p style="color: #a1a1aa;">Data kepengurusan Bidang Hubungan Masyarakat Periode 2026 sedang dalam proses sinkronisasi.</p>
                         </div>
                     @endforelse
                 </div>

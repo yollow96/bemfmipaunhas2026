@@ -18,7 +18,7 @@
     <main id="main" style="background-color: #000000;" class="py-5">
         <div class="container text-center" data-aos="fade-up">
             <div class="p-3 p-lg-4 d-inline-block" style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px;">
-                <img src="{{ asset('assets/img/struktur_matriks.png') }}" class="img-fluid" style="border-radius: 2px;" alt="Bagan Struktur BEM FMIPA Unhas">
+                <img src="{{ asset('assets/img/struktur_matriks.png') }}" width="1200" height="800" class="img-fluid" style="border-radius: 2px;" alt="Bagan Struktur BEM FMIPA Unhas">
             </div>
         </div>
     </main>

@@ -41,7 +41,7 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="fmipa-news-card h-100">
                                 <div class="fmipa-news-img">
-                                    <img src="{{ asset($item->image) }}" alt="{{ $item->judul }}" onerror="this.src='{{ asset('assets/img/default.jpg') }}'">
+                                    <img src="{{ asset($item->image) }}" alt="{{ $item->judul }}" width="400" height="240" onerror="this.src='{{ asset('assets/img/default.jpg') }}'">
                                     <span class="fmipa-news-date">
                                         <i class="bi bi-calendar3 me-1"></i> {{ $item->created_at ? $item->created_at->format('d M Y') : 'Terbaru' }}
                                     </span>
@@ -69,8 +69,7 @@
 
                                     <div class="pt-3 border-top mt-3" style="border-color: #222 !important;">
                                         <a href="{{ url('/guest/blog/' . $item->id) }}" class="text-warning fw-bold text-decoration-none d-inline-flex align-items-center gap-1" style="font-size: 13px;">
-                                            <span>Baca Selengkapnya</span>
-                                            <i class="bi bi-arrow-right"></i>
+                                            <span>Baca Artikel Lengkap</span>
                                         </a>
                                     </div>
                                 </div>

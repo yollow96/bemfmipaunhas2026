@@ -29,7 +29,7 @@
                         <article class="blog-details">
                             @if($blog->image)
                                 <div class="post-img overflow-hidden mb-4" style="border: 1px solid #27272a; border-radius: 4px;">
-                                    <img src="{{ asset($blog->image) }}" alt="{{ $blog->judul }}" class="img-fluid w-100" style="max-height: 480px; object-fit: cover;" onerror="this.src='{{ asset('assets/img/default.jpg') }}'">
+                                    <img src="{{ asset($blog->image) }}" alt="{{ $blog->judul }}" width="800" height="480" class="img-fluid w-100" style="max-height: 480px; object-fit: cover;" onerror="this.src='{{ asset('assets/img/default.jpg') }}'">
                                 </div>
                             @endif
 
@@ -40,7 +40,7 @@
                                 <small style="color: #a1a1aa;">
                                     {{ $blog->author ?? 'BEM FMIPA Unhas' }}
                                 </small>
-                                <small style="color: #71717a;">
+                                <small style="color: #a1a1aa;">
                                     {{ $blog->created_at ? $blog->created_at->format('d F Y') : 'Terbaru' }}
                                 </small>
                             </div>

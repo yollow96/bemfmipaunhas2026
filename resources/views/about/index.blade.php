@@ -39,7 +39,7 @@
                         <div class="row align-items-start gy-4 mt-2">
                             <div class="col-lg-4 text-center">
                                 <div class="p-3" style="background: #111115; border: 1px solid #27272a; border-radius: 4px;">
-                                    <img src="{{ asset('assets/img/alm_prof_diaraya.png') }}" alt="Alm. Dr. Diaraya, M. Ak" class="img-fluid mb-3" style="max-height: 280px; object-fit: cover; border-radius: 2px;">
+                                    <img src="{{ asset('assets/img/alm_prof_diaraya.png') }}" alt="Alm. Dr. Diaraya, M. Ak" width="260" height="280" class="img-fluid mb-3" style="max-height: 280px; object-fit: cover; border-radius: 2px;">
                                     <h5 class="text-white fw-bold m-0" style="font-size: 16px;">Alm. Dr. Diaraya, M. Ak</h5>
                                     <small style="color: #FFE500; font-weight: 700; font-size: 12px;">Perintis & Tokoh Pendidik FMIPA Unhas</small>
                                 </div>
@@ -89,7 +89,7 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/inti.png') }}" alt="Struktur Inti">
+                                            <img src="{{ asset('assets/img/icon/inti.png') }}" width="80" height="80" alt="Struktur Inti">
                                             <h3>Struktur Inti</h3>
                                         </div>
                                     </div>
@@ -107,13 +107,13 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/struktur.png') }}" alt="Bagan Struktur">
+                                            <img src="{{ asset('assets/img/icon/struktur.png') }}" width="80" height="80" alt="Bagan Struktur">
                                             <h3>Bagan Struktur</h3>
                                         </div>
                                     </div>
                                     <div class="face face2">
                                         <div class="content">
-                                            <p>Diagram hierarki matriks kepengurusan lengkap BEM FMIPA Unhas Periode 2025/2026.</p>
+                                            <p>Diagram hierarki matriks kepengurusan lengkap BEM FMIPA Unhas Periode 2026.</p>
                                             <a href="/about/struktur">Lihat Bagan</a>
                                         </div>
                                     </div>
@@ -125,7 +125,7 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/dewan.png') }}" alt="Dewan Mahasiswa">
+                                            <img src="{{ asset('assets/img/icon/dewan.png') }}" width="80" height="80" alt="Dewan Mahasiswa">
                                             <h3>Dewan Mahasiswa</h3>
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/pengaderan.png') }}" alt="Bidang Pengaderan">
+                                            <img src="{{ asset('assets/img/icon/pengaderan.png') }}" width="80" height="80" alt="Bidang Pengaderan">
                                             <h3>Bidang Pengaderan</h3>
                                         </div>
                                     </div>
@@ -161,7 +161,7 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/eksternal.png') }}" alt="Kajian Strategis dan Advokasi">
+                                            <img src="{{ asset('assets/img/icon/eksternal.png') }}" width="80" height="80" alt="Kajian Strategis dan Advokasi">
                                             <h3>Kajian Strategis & Advokasi</h3>
                                         </div>
                                     </div>
@@ -179,7 +179,7 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/eksternal.png') }}" alt="Hubungan Masyarakat">
+                                            <img src="{{ asset('assets/img/icon/eksternal.png') }}" width="80" height="80" alt="Hubungan Masyarakat">
                                             <h3>Hubungan Masyarakat</h3>
                                         </div>
                                     </div>
@@ -197,7 +197,7 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/akademik.png') }}" alt="Akademik dan Kemahasiswaan">
+                                            <img src="{{ asset('assets/img/icon/akademik.png') }}" width="80" height="80" alt="Akademik dan Kemahasiswaan">
                                             <h3>Akademik & Kemahasiswaan</h3>
                                         </div>
                                     </div>
@@ -215,7 +215,7 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/kesek.png') }}" alt="Bidang Kesekretariatan">
+                                            <img src="{{ asset('assets/img/icon/kesek.png') }}" width="80" height="80" alt="Bidang Kesekretariatan">
                                             <h3>Bidang Kesekretariatan</h3>
                                         </div>
                                     </div>
@@ -233,7 +233,7 @@
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/rohis.png') }}" alt="Bidang Kerohanian Islam">
+                                            <img src="{{ asset('assets/img/icon/rohis.png') }}" width="80" height="80" alt="Bidang Kerohanian Islam">
                                             <h3>Bidang Kerohanian Islam</h3>
                                         </div>
                                     </div>

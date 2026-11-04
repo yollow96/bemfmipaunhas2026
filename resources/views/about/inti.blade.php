@@ -57,12 +57,20 @@
                         <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
                                 <img src="{{ $pengurus->foto ? asset($pengurus->foto) : asset('assets/img/default.jpg') }}"
-                                    class="img-fluid" alt="">
+                                    class="img-fluid" width="360" height="420" alt="{{ $pengurus->nama }}">
                                 <div class="social">
-                                    <a href="{{ $pengurus->twitter }}"><i class="bi bi-twitter"></i></a>
-                                    <a href="{{ $pengurus->instagram }}"><i class="bi bi-instagram"></i></a>
-                                    <a href="{{ $pengurus->facebook }}"><i class="bi bi-facebook"></i></a>
-                                    <a href="{{ $pengurus->instagram }}"><i class="bi bi-linkedin"></i></a>
+                                    @if(!empty($pengurus->twitter))
+                                        <a href="{{ $pengurus->twitter }}" target="_blank" aria-label="Twitter {{ $pengurus->nama }}"><i class="bi bi-twitter" aria-hidden="true"></i></a>
+                                    @endif
+                                    @if(!empty($pengurus->instagram))
+                                        <a href="{{ $pengurus->instagram }}" target="_blank" aria-label="Instagram {{ $pengurus->nama }}"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                                    @endif
+                                    @if(!empty($pengurus->facebook))
+                                        <a href="{{ $pengurus->facebook }}" target="_blank" aria-label="Facebook {{ $pengurus->nama }}"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                                    @endif
+                                    @if(!empty($pengurus->linkedin))
+                                        <a href="{{ $pengurus->linkedin }}" target="_blank" aria-label="LinkedIn {{ $pengurus->nama }}"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                                    @endif
                                 </div>
                             </div>
                             <div class="member-info text-center">

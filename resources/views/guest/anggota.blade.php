@@ -47,9 +47,9 @@
                         <!-- Search Form -->
                         <div style="min-width: 280px;">
                             <form action="{{ route('guest.search') }}" method="GET" class="d-flex gap-2">
-                                <input type="text" placeholder="Cari nama, angkatan, prodi..." name="s" value="{{ request('s') }}" class="form-control fmipa-input" style="font-size: 13px;">
-                                <button type="submit" class="fmipa-btn-primary" style="padding: 8px 16px !important;">
-                                    <i class="bi bi-search"></i>
+                                <input type="text" placeholder="Cari nama, angkatan, prodi..." name="s" value="{{ request('s') }}" class="form-control fmipa-input" style="font-size: 13px;" aria-label="Cari nama, angkatan, atau program studi anggota">
+                                <button type="submit" class="fmipa-btn-primary" style="padding: 8px 16px !important;" aria-label="Kirim pencarian data anggota">
+                                    <i class="bi bi-search" aria-hidden="true"></i>
                                 </button>
                             </form>
                         </div>
@@ -81,7 +81,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="5" class="text-center py-5" style="color: #71717a;">
+                                        <td colspan="5" class="text-center py-5" style="color: #a1a1aa;">
                                             Tidak ditemukan data anggota yang sesuai dengan kata kunci pencarian.
                                         </td>
                                     </tr>

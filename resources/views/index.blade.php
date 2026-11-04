@@ -18,6 +18,8 @@
                 <div class="carousel-item active position-relative" style="min-height: 88vh;">
                     <img src="{{ asset('assets/img/slide/pengurus2026.JPG') }}" 
                          alt="Pengurus BEM FMIPA Unhas 2026" 
+                         fetchpriority="high"
+                         width="1920" height="1080"
                          class="position-absolute top-0 start-0 w-100 h-100" 
                          style="object-fit: cover; object-position: center; z-index: 1;">
                     <div class="position-absolute top-0 start-0 w-100 h-100" 
@@ -69,6 +71,7 @@
                 <div class="carousel-item position-relative" style="min-height: 88vh;">
                     <img src="{{ asset('assets/img/slide/pengurus20261.JPG') }}" 
                          alt="Pengurus BEM FMIPA Unhas 2026" 
+                         width="1920" height="1080"
                          class="position-absolute top-0 start-0 w-100 h-100" 
                          style="object-fit: cover; object-position: center; z-index: 1;">
                     <div class="position-absolute top-0 start-0 w-100 h-100" 
@@ -120,6 +123,7 @@
                 <div class="carousel-item position-relative" style="min-height: 88vh;">
                     <img src="{{ asset('assets/img/slide/pengurus20262.JPG') }}" 
                          alt="Pengurus BEM FMIPA Unhas 2026" 
+                         width="1920" height="1080"
                          class="position-absolute top-0 start-0 w-100 h-100" 
                          style="object-fit: cover; object-position: center; z-index: 1;">
                     <div class="position-absolute top-0 start-0 w-100 h-100" 
@@ -188,7 +192,7 @@
                                                 {{ $carousel->deskripsi }}
                                             </p>
                                             <a href="{{ $carousel->link }}" class="fmipa-btn-primary">
-                                                Pelajari Selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+                                                Buka Informasi Event
                                             </a>
                                         </div>
                                     </div>
@@ -212,6 +216,7 @@
                                         </div>
                                         <div class="col-lg-6 text-center">
                                             <img src="{{ asset($carousel->gambar_path) }}" alt="{{ $carousel->judul }}" 
+                                                 width="500" height="350"
                                                  class="img-fluid" style="max-height: 420px; border: 1px solid #27272a; border-radius: 4px;">
                                         </div>
                                     </div>
@@ -223,11 +228,11 @@
             </div>
 
             <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev" style="width: 5%;">
+            <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev" style="width: 5%; min-width: 48px;">
                 <span class="carousel-control-prev-icon p-3 rounded-circle" style="background-color: #000000; border: 1px solid #FFFF00;" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next" style="width: 5%;">
+            <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next" style="width: 5%; min-width: 48px;">
                 <span class="carousel-control-next-icon p-3 rounded-circle" style="background-color: #000000; border: 1px solid #FFFF00;" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -247,7 +252,7 @@
                                     <span style="width: 6px; height: 6px; background-color: #FFE500; display: inline-block;"></span>
                                 </div>
                                 <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Departemen Sains</div>
-                                <div style="font-size: 11.5px; color: #71717a; margin-top: 2px;">Matematika, Fisika, Kimia, Biologi, Geofisika, Statistika</div>
+                                <div style="font-size: 11.5px; color: #a1a1aa; margin-top: 2px;">Matematika, Fisika, Kimia, Biologi, Geofisika, Statistika</div>
                             </div>
                         </div>
 
@@ -258,7 +263,7 @@
                                     <span style="width: 6px; height: 6px; background-color: #FFE500; display: inline-block;"></span>
                                 </div>
                                 <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Bidang Kerja BEM</div>
-                                <div style="font-size: 11.5px; color: #71717a; margin-top: 2px;">Pengaderan, Kastrat, Humas, Akademik, Kesekretariatan, Rohis</div>
+                                <div style="font-size: 11.5px; color: #a1a1aa; margin-top: 2px;">Pengaderan, Kastrat, Humas, Akademik, Kesekretariatan, Rohis</div>
                             </div>
                         </div>
 
@@ -269,7 +274,7 @@
                                     <span style="width: 6px; height: 6px; background-color: #FFE500; display: inline-block;"></span>
                                 </div>
                                 <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Program Kerja 2026</div>
-                                <div style="font-size: 11.5px; color: #71717a; margin-top: 2px;">PROGRESIP, Agora MIPA, MIPA Mengabdi, Harmonia, SIGMA, dll.</div>
+                                <div style="font-size: 11.5px; color: #a1a1aa; margin-top: 2px;">PROGRESIP, Agora MIPA, MIPA Mengabdi, Harmonia, SIGMA, dll.</div>
                             </div>
                         </div>
 
@@ -280,7 +285,7 @@
                                     <span style="width: 6px; height: 6px; background-color: #FFE500; display: inline-block;"></span>
                                 </div>
                                 <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Mahasiswa Aktif</div>
-                                <div style="font-size: 11.5px; color: #71717a; margin-top: 2px;">Keluarga Mahasiswa FMIPA Universitas Hasanuddin</div>
+                                <div style="font-size: 11.5px; color: #a1a1aa; margin-top: 2px;">Keluarga Mahasiswa FMIPA Universitas Hasanuddin</div>
                             </div>
                         </div>
                     </div>
@@ -291,11 +296,16 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             const counters = document.querySelectorAll(".hero-counter-value");
             counters.forEach(counter => {
                 const target = +counter.getAttribute("data-target");
                 const suffix = counter.getAttribute("data-suffix") || "";
                 if (!target) return;
+                if (prefersReducedMotion) {
+                    counter.innerText = target.toLocaleString('id-ID') + suffix;
+                    return;
+                }
                 const duration = 1000;
                 const steps = 25;
                 const stepTime = duration / steps;
@@ -369,14 +379,14 @@
                     <div class="row align-items-center gy-4">
                         <div class="col-lg-4 text-center">
                             <div class="sambutan-photo-frame mx-auto" style="max-width: 280px; border-radius: 4px; border: 1px solid #27272a;">
-                                <img src="{{ asset('assets/img/ketuaumum.jpg') }}" alt="Ketua Umum BEM FMIPA Unhas" class="img-fluid" style="width: 100%; height: 320px; object-fit: cover;">
+                                <img src="{{ asset('assets/img/ketuaumum.jpg') }}" alt="Ketua Umum BEM FMIPA Unhas" width="280" height="320" class="img-fluid" style="width: 100%; height: 320px; object-fit: cover;">
                             </div>
                             <div class="mt-3">
                                 <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em;">
                                     KETUA UMUM BEM FMIPA UNHAS
                                 </span>
                                 <h5 class="text-white fw-bold mt-2 mb-0" style="font-size: 15px;">Adrian Tri Saputra</h5>
-                                <small style="color: #71717a; font-size: 12px;">Periode 2026</small>
+                                <small style="color: #a1a1aa; font-size: 12px;">Periode 2026</small>
                             </div>
                         </div>
 
@@ -397,10 +407,10 @@
                                 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top mt-3" style="border-color: #1f1f23 !important;">
                                     <div>
                                         <div class="text-white fw-bold" style="font-size: 13.5px;">BEM FMIPA UNHAS PERIODE 2026</div>
-                                        <small style="color: #71717a;">Universitas Hasanuddin, Makassar</small>
+                                        <small style="color: #a1a1aa;">Universitas Hasanuddin, Makassar</small>
                                     </div>
                                     <a href="/about/inti" class="btn btn-outline-warning" style="font-size: 12.5px; padding: 6px 14px;">
-                                        Lihat Pengurus →
+                                        Lihat Struktur Pengurus
                                     </a>
                                 </div>
                             </div>
@@ -435,7 +445,7 @@
                             </div>
                             <div class="pt-3 border-top mt-4" style="border-color: #1f1f23 !important;">
                                 <div style="font-size: 12px; color: #FFE500; font-weight: 600;">Tri Dharma Perguruan Tinggi & Keilmuan Sains</div>
-                                <div style="font-size: 11px; color: #71717a;">BEM FMIPA Universitas Hasanuddin Periode 2026</div>
+                                <div style="font-size: 11px; color: #a1a1aa;">BEM FMIPA Universitas Hasanuddin Periode 2026</div>
                             </div>
                         </div>
                     </div>
@@ -495,8 +505,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
             </div>
         </section>
 
@@ -603,7 +611,7 @@
                 <div class="row align-items-center gy-4">
                     <div class="col-lg-5 text-center">
                         <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 24px; display: inline-block;">
-                            <img src="{{ asset('assets/img/logokmfterbaru.png') }}" alt="Logo BEM FMIPA Unhas" class="img-fluid" style="max-height: 240px;">
+                            <img src="{{ asset('assets/img/logokmfterbaru.png') }}" alt="Logo BEM FMIPA Unhas" width="240" height="240" class="img-fluid" style="max-height: 240px; width: auto;">
                         </div>
                     </div>
 
@@ -684,7 +692,7 @@
                                     </div>
                                 </div>
                                 <a href="/about/pengaderan" class="fmipa-btn-card">
-                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
+                                    Struktur Bidang Pengaderan
                                 </a>
                             </div>
                         </div>
@@ -711,7 +719,7 @@
                                     </div>
                                 </div>
                                 <a href="/about/advokasi" class="fmipa-btn-card">
-                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
+                                    Struktur Bidang Advokasi
                                 </a>
                             </div>
                         </div>
@@ -738,7 +746,7 @@
                                     </div>
                                 </div>
                                 <a href="/about/humas" class="fmipa-btn-card">
-                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
+                                    Struktur Bidang Humas
                                 </a>
                             </div>
                         </div>
@@ -765,7 +773,7 @@
                                     </div>
                                 </div>
                                 <a href="/about/akademik" class="fmipa-btn-card">
-                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
+                                    Struktur Bidang Akademik
                                 </a>
                             </div>
                         </div>
@@ -792,7 +800,7 @@
                                     </div>
                                 </div>
                                 <a href="/about/kesek" class="fmipa-btn-card">
-                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
+                                    Struktur Bidang Kesekretariatan
                                 </a>
                             </div>
                         </div>
@@ -819,7 +827,7 @@
                                     </div>
                                 </div>
                                 <a href="/about/rohis" class="fmipa-btn-card">
-                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
+                                    Struktur Bidang Kerohanian Islam
                                 </a>
                             </div>
                         </div>
@@ -841,7 +849,7 @@
                         </h2>
                     </div>
                     <a href="/guest/blog" class="btn btn-outline-warning" style="font-size: 12.5px; padding: 6px 14px;">
-                        <span>Semua Publikasi</span> →
+                        <span>Buka Arsip Publikasi</span>
                     </a>
                 </div>
 
@@ -850,7 +858,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="fmipa-news-card">
                                 <div class="fmipa-news-img">
-                                    <img src="{{ asset($item->image) }}" alt="{{ $item->judul }}" onerror="this.src='{{ asset('assets/img/default.jpg') }}'">
+                                    <img src="{{ asset($item->image) }}" alt="{{ $item->judul }}" width="380" height="220" onerror="this.src='{{ asset('assets/img/default.jpg') }}'">
                                     <span class="fmipa-news-date">
                                         {{ $item->created_at ? $item->created_at->format('d M Y') : 'Terbaru' }}
                                     </span>
@@ -861,7 +869,7 @@
                                             <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">
                                                 {{ $item->kategori ?? 'Informasi' }}
                                             </span>
-                                            <span style="color: #71717a; font-size: 11.5px;">
+                                            <span style="color: #a1a1aa; font-size: 11.5px;">
                                                 {{ $item->author ?? 'BEM FMIPA' }}
                                             </span>
                                         </div>
@@ -874,7 +882,7 @@
                                     </div>
                                     <div class="pt-2 border-top mt-3" style="border-color: #1f1f23 !important;">
                                         <a href="{{ url('/guest/blog/' . $item->id) }}" style="color: #FFE500; font-size: 12px; font-weight: 600; text-decoration: none;">
-                                            Baca Selengkapnya →
+                                            Baca Artikel Lengkap
                                         </a>
                                     </div>
                                 </div>
@@ -884,7 +892,7 @@
                         <div class="col-12 text-center py-4">
                             <div class="p-3 d-inline-block" style="background: #111115; border: 1px solid #27272a; border-radius: 4px;">
                                 <h6 class="text-white mb-1" style="font-size: 14px;">Belum ada artikel yang dipublikasikan.</h6>
-                                <p class="text-muted m-0" style="font-size: 12px;">Update informasi akan ditampilkan di sini.</p>
+                                <p class="m-0" style="color: #a1a1aa; font-size: 12px;">Update informasi akan ditampilkan di sini.</p>
                             </div>
                         </div>
                     @endforelse
@@ -915,7 +923,7 @@
                                 <p style="color: #a1a1aa; font-size: 12px; line-height: 1.4; margin: 0 0 10px;">
                                     Penerimaan anggota baru, pengenalan KM FMIPA Unhas, dan penanaman nilai dasar kemahasiswaan.
                                 </p>
-                                <div style="font-size: 11px; color: #71717a; border-top: 1px solid #1f1f23; padding-top: 8px;">
+                                <div style="font-size: 11px; color: #a1a1aa; border-top: 1px solid #1f1f23; padding-top: 8px;">
                                     Kampus FMIPA Unhas
                                 </div>
                             </div>
@@ -930,7 +938,7 @@
                                 <p style="color: #a1a1aa; font-size: 12px; line-height: 1.4; margin: 0 0 10px;">
                                     Ruang diskusi terbuka dan dialogis kritis isu strategis demi meningkatkan kesadaran bersama.
                                 </p>
-                                <div style="font-size: 11px; color: #71717a; border-top: 1px solid #1f1f23; padding-top: 8px;">
+                                <div style="font-size: 11px; color: #a1a1aa; border-top: 1px solid #1f1f23; padding-top: 8px;">
                                     Pelataran / Aula FMIPA
                                 </div>
                             </div>
@@ -945,7 +953,7 @@
                                 <p style="color: #a1a1aa; font-size: 12px; line-height: 1.4; margin: 0 0 10px;">
                                     Peningkatan kualitas lingkungan hidup melalui edukasi solutif dan aksi pelestarian alam nyata.
                                 </p>
-                                <div style="font-size: 11px; color: #71717a; border-top: 1px solid #1f1f23; padding-top: 8px;">
+                                <div style="font-size: 11px; color: #a1a1aa; border-top: 1px solid #1f1f23; padding-top: 8px;">
                                     Wilayah Mitra / Masyarakat
                                 </div>
                             </div>
@@ -960,7 +968,7 @@
                                 <p style="color: #a1a1aa; font-size: 12px; line-height: 1.4; margin: 0 0 10px;">
                                     Studi Islam Generasi Muslim MIPA dan sinergi pembelajaran syariat berpadu dengan nalar sains.
                                 </p>
-                                <div style="font-size: 11px; color: #71717a; border-top: 1px solid #1f1f23; padding-top: 8px;">
+                                <div style="font-size: 11px; color: #a1a1aa; border-top: 1px solid #1f1f23; padding-top: 8px;">
                                     Musholla / Gedung FMIPA
                                 </div>
                             </div>

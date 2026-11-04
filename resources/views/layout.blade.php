@@ -57,12 +57,12 @@
                 <img src="{{ asset('assets/img/logokmfterbaru.png') }}" alt="BEM FMIPA Unhas" width="160" height="40" style="max-height: 40px; width: auto;">
                 <div class="d-flex flex-column text-start">
                     <span style="font-weight: 900; font-size: 17px; color: #ffffff; letter-spacing: 0.5px; line-height: 1.1;">BEM <span style="color: #FFE500;">FMIPA</span></span>
-                    <span style="font-size: 10px; color: #71717a; letter-spacing: 1.5px; text-transform: uppercase;">UNIVERSITAS HASANUDDIN</span>
+                    <span style="font-size: 10px; color: #a1a1aa; letter-spacing: 1.5px; text-transform: uppercase;">UNIVERSITAS HASANUDDIN</span>
                 </div>
             </a>
 
             <div class="humburger">
-                <input type="checkbox" id="mobileNavCheckbox">
+                <input type="checkbox" id="mobileNavCheckbox" aria-label="Buka menu navigasi">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -239,7 +239,7 @@
                                 <img src="{{ asset('assets/img/logokmfterbaru.png') }}" alt="Logo BEM FMIPA Unhas" width="176" height="44" style="max-height: 44px; width: auto;">
                                 <div>
                                     <h4 class="m-0 text-white fw-black" style="font-size: 18px; font-weight: 900; line-height: 1.1;">BEM <span style="color: #FFE500;">FMIPA</span></h4>
-                                    <small style="color: #71717a; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;">UNIVERSITAS HASANUDDIN</small>
+                                    <small style="color: #a1a1aa; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;">UNIVERSITAS HASANUDDIN</small>
                                 </div>
                             </div>
                             <p style="color: #a1a1aa; font-size: 13px; line-height: 1.7;">
@@ -285,7 +285,7 @@
 
                     <div class="col-lg-4 col-md-6 footer-link" id="aspirasi">
                         <h4 style="color: #FFE500; font-size: 13px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">Hubungi Sekretariat</h4>
-                        <p style="color: #71717a; font-size: 12px; margin-bottom: 12px;">Sampaikan aspirasi, advokasi, atau kemitraan strategis:</p>
+                        <p style="color: #a1a1aa; font-size: 12px; margin-bottom: 12px;">Sampaikan aspirasi, advokasi, atau kemitraan strategis:</p>
                         <form method="post" action="{{ route('submitForm') }}">
                             @csrf
                             <div class="mb-2">
@@ -320,7 +320,7 @@
 
         <div class="footer-legal text-center position-relative py-3" style="background-color: #09090b; border-top: 1px solid #1f1f23;">
             <div class="container">
-                <div class="copyright" style="color: #71717a; font-size: 13px;">
+                <div class="copyright" style="color: #a1a1aa; font-size: 13px;">
                     &copy; {{ date('Y') }} <strong class="text-white">BEM FMIPA Universitas Hasanuddin</strong>. All Rights Reserved. 
                     <span style="color: #FFE500; font-weight: 600; margin-left: 8px;">Queen of Science</span>
                 </div>
@@ -330,8 +330,9 @@
     </footer>
     <!-- End Footer -->
 
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <button type="button" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Kembali ke atas layar" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
+    </button>
 
     <div id="preloader"></div>
     <script src="{{ asset('assets/js/app.js') }}"></script>
