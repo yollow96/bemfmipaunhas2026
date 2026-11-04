@@ -154,8 +154,7 @@
                                 </div>
                                 <div class="face face2">
                                     <div class="content">
-                                        <p>Struktur Inti BE Himatika FMIPA Unhas terdiri dari seorang Ketua Umum yang
-                                            dibantu oleh Sekretaris Umum dan Bendahara Umum...</p>
+                                        <p>Struktur Inti BEM FMIPA Unhas terdiri dari Ketua Umum, didampingi Sekretaris Umum dan Bendahara Umum.</p>
                                         <a href="/about/inti">Read More</a>
                                     </div>
                                 </div>
@@ -184,13 +183,12 @@
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="{{ asset('assets/img/icon/dewan.png') }}">
-                                        <h3>Dewan</h3>
+                                        <h3>Dewan Perwakilan Anggota</h3>
                                     </div>
                                 </div>
                                 <div class="face face2">
                                     <div class="content">
-                                        <p>Dewan Himatika FMIPA Unhas merupakan lembaga legislatif dari Himatika FMIPA
-                                            Unhas. Dewan hadir dalam organisasi...</p>
+                                        <p>Dewan Perwakilan Anggota (DPA) menjalankan fungsi legislasi, pengawasan, dan penyaluran aspirasi mahasiswa.</p>
                                         <a href="/about/dewan">Read More</a>
                                     </div>
                                 </div>
@@ -207,9 +205,7 @@
                                 </div>
                                 <div class="face face2">
                                     <div class="content">
-                                        <p>Bidang kerohanian islam merupakan bidang yang mewadahi anggota Himatika FMIPA
-                                            Unhas khususnya untuk muslim dan muslimah yang bertujuan...
-                                        </p>
+                                        <p>Pembinaan nilai-nilai spiritualitas islami dan moralitas civitas akademika via SIGMA, SINTESIS, dan Pamflet Syiar Islam.</p>
                                         <a href="/about/rohis">Read More</a>
                                     </div>
                                 </div>
@@ -226,9 +222,7 @@
                                 </div>
                                 <div class="face face2">
                                     <div class="content">
-                                        <p>Membentuk kader sesuai dengan tujuan Himatika FMIPA Unhas dan
-                                            Melakukan pengawalan terhadap proses pengaderan anggota Himatika FMIPA Unhas...
-                                        </p>
+                                        <p>Membina dan mengawal kaderisasi terpadu BEM FMIPA Unhas lewat PROGRESIP 2026 dan PPK.</p>
                                         <a href="/about/pengaderan">Read More</a>
                                     </div>
                                 </div>
@@ -245,8 +239,7 @@
                                 </div>
                                 <div class="face face2">
                                     <div class="content">
-                                        <p>Bidang Akademik dan Kemahasiswaan hadir untuk menjalankan fungsi pengawalan
-                                            urusan akademik anggota Himatika FMIPA Unhas...</p>
+                                        <p>Pelayanan dan pendampingan urusan akademik mahasiswa FMIPA Unhas serta program Pelepasan Wisudawan.</p>
                                         <a href="/about/akademik">Read More</a>
                                     </div>
                                 </div>
@@ -257,15 +250,14 @@
                             <div class="card" data-aos="fade-up" data-aos-delay="100">
                                 <div class="face face1">
                                     <div class="content">
-                                        <img src="{{ asset('assets/img/icon/miba.png') }}">
-                                        <h3>Minat & Bakat</h3>
+                                        <img src="{{ asset('assets/img/icon/eksternal.png') }}">
+                                        <h3>Kajian Strategis & Advokasi</h3>
                                     </div>
                                 </div>
                                 <div class="face face2">
                                     <div class="content">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus
-                                            iste veritatis provident at.</p>
-                                        <a href="/about/miba">Read More</a>
+                                        <p>Pengkajian isu-isu strategis, pergerakan, dan advokasi hak serta fasilitas mahasiswa melalui Agora MIPA.</p>
+                                        <a href="/about/advokasi">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -276,14 +268,13 @@
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="{{ asset('assets/img/icon/eksternal.png') }}">
-                                        <h3>Eksternal</h3>
+                                        <h3>Hubungan Masyarakat</h3>
                                     </div>
                                 </div>
                                 <div class="face face2">
                                     <div class="content">
-                                        <p>Bidang Eksternal berfungsi untuk mengidentifikasi dan mengkaji isu untuk
-                                            menentukan sikap yang bijak dalam...</p>
-                                        <a href="/about/eksternal">Read More</a>
+                                        <p>Kemitraan strategis eksternal, diseminasi informasi publik, dan pengabdian masyarakat nyata via MIPA Mengabdi.</p>
+                                        <a href="/about/humas">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -299,8 +290,7 @@
                                 </div>
                                 <div class="face face2">
                                     <div class="content">
-                                        <p>Bidang kesekretariatan adalah bidang yang bertanggung jawab terhadap sekretariat
-                                            Himatika FMIPA Unhas...</p>
+                                        <p>Pengelolaan administrasi surat, inventaris, dan kenyamanan sekretariat lewat program Harmonia.</p>
                                         <a href="/about/kesek">Read More</a>
                                     </div>
                                 </div>

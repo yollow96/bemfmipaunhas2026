@@ -1,80 +1,80 @@
 import React, { useState, useMemo } from 'react';
 
 export default function DynamicBidangShowcase() {
-    const categories = ['Semua', 'Pimpinan & Dewan', 'Internal & Kader', 'Akademik & Bakat', 'Relasi & Kesekretariatan'];
+    const categories = ['Semua', 'Pimpinan & Legislatif', 'Kaderisasi & Karakter', 'Advokasi & Akademik', 'Humas & Kesekretariatan'];
 
     const bidangList = [
         {
             id: 'inti',
             nama: 'Struktur Inti BEM',
-            kategori: 'Pimpinan & Dewan',
-            tagline: 'Kepemimpinan & Tata Kelola Organisasi',
-            deskripsi: 'Ketua Umum, Sekretaris Umum, dan Bendahara Umum mengarahkan kebijakan strategis, legalitas formal, serta koordinasi seluruh elemen.',
+            kategori: 'Pimpinan & Legislatif',
+            tagline: 'Ketua Umum, Sekretaris Umum & Bendahara Umum',
+            deskripsi: 'Ketua Umum (Adrian Tri Saputra), Sekretaris Umum, dan Bendahara Umum mengarahkan kebijakan strategis, legalitas formal, serta tata kelola organisasi.',
             proker: ['Rapat Kerja Tahunan', 'Grand Briefing Pengurus', 'Monitoring & Evaluasi Bulanan'],
             link: '/about/inti'
         },
         {
             id: 'dewan',
-            nama: 'Dewan Mahasiswa FMIPA',
-            kategori: 'Pimpinan & Dewan',
+            nama: 'Dewan Perwakilan Anggota (DPA)',
+            kategori: 'Pimpinan & Legislatif',
             tagline: 'Legislasi, Pengawasan & Yudikatif',
-            deskripsi: 'Lembaga legislatif kemahasiswaan yang bertugas mengawasi kinerja eksekutif, menyusun produk hukum, dan mengawal musyawarah mahasiswa.',
+            deskripsi: 'Lembaga legislatif kemahasiswaan yang bertugas mengawasi kinerja eksekutif BEM, menyusun produk hukum, dan mengawal musyawarah mahasiswa.',
             proker: ['Sidang Pleno Mahasiswa', 'Legislative Hearing', 'Sosialisasi Produk Hukum'],
             link: '/about/dewan'
         },
         {
             id: 'pengaderan',
             nama: 'Bidang Pengaderan',
-            kategori: 'Internal & Kader',
-            tagline: 'Kurikulum Kaderisasi & Karakter',
-            deskripsi: 'Merumuskan dan mengawal kurikulum kaderisasi bertahap untuk mencetak generasi mahasiswa sains yang kritis, berintegritas, dan solutif.',
-            proker: ['Latihan Kepemimpinan Mahasiswa (LKM)', 'Pendampingan Mahasiswa Baru', 'Sekolah Pemikiran Kritis'],
+            kategori: 'Kaderisasi & Karakter',
+            tagline: 'Kaderisasi Berjenjang & Nilai Perjuangan',
+            deskripsi: 'Merumuskan dan mengawal proses pengaderan anggota BEM FMIPA Unhas yang berkarakter tangguh, kritis, dan berintegritas.',
+            proker: ['PROGRESIP 2026', 'Program Pengembangan Kader (PPK)', 'Kader Siang & Kader Malam'],
             link: '/about/pengaderan'
+        },
+        {
+            id: 'advokasi',
+            nama: 'Bidang Kajian Strategis & Advokasi',
+            kategori: 'Advokasi & Akademik',
+            tagline: 'Kajian Isu Strategis & Dialektika Terbuka',
+            deskripsi: 'Garda terdepan pengawalan isu strategis kebijakan kampus dan kemahasiswaan, advokasi fasilitas akademik, serta ruang dialektika via Agora MIPA.',
+            proker: ['Agora MIPA', 'Kajian Kebijakan Kampus', 'Advokasi Fasilitas Mahasiswa'],
+            link: '/about/advokasi'
+        },
+        {
+            id: 'humas',
+            nama: 'Bidang Hubungan Masyarakat',
+            kategori: 'Humas & Kesekretariatan',
+            tagline: 'Kemitraan Publik & Pengabdian Masyarakat',
+            deskripsi: 'Jembatan relasi eksternal, diseminasi informasi publik, aksi kelestarian lingkungan, serta pengabdian masyarakat nyata berbasis sains.',
+            proker: ['MIPA Mengabdi', 'Kemitraan Publik & Publikasi', 'Edukasi Kelestarian Lingkungan'],
+            link: '/about/humas'
+        },
+        {
+            id: 'akademik',
+            nama: 'Bidang Akademik & Kemahasiswaan',
+            kategori: 'Advokasi & Akademik',
+            tagline: 'Pelayanan Akademik & Pelepasan Wisudawan',
+            deskripsi: 'Mengawal pelayanan urusan akademik, pendampingan hak-hak mahasiswa, serta penghargaan status keanggotaan via Pelepasan Wisudawan.',
+            proker: ['Pelepasan Wisudawan', 'Pengawalan Hak Mahasiswa', 'Layanan Informasi Akademik'],
+            link: '/about/akademik'
+        },
+        {
+            id: 'kesekretariatan',
+            nama: 'Bidang Kesekretariatan',
+            kategori: 'Humas & Kesekretariatan',
+            tagline: 'Harmonisasi & Tata Kelola Sekretariat',
+            deskripsi: 'Mewujudkan lingkungan organisasi yang nyaman, indah, dan rapi melalui Harmonia serta optimalisasi tata kelola administrasi dan persuratan.',
+            proker: ['Harmonia', 'Tata Kelola Persuratan', 'Inventarisasi & Rumah BEM'],
+            link: '/about/kesek'
         },
         {
             id: 'rohis',
             nama: 'Bidang Kerohanian Islam',
-            kategori: 'Internal & Kader',
-            tagline: 'Pembinaan Spiritual & Moral',
-            deskripsi: 'Wadah pembinaan nilai spiritualitas, moralitas intelektual, dan toleransi civitas akademika FMIPA Unhas.',
-            proker: ['Kajian Rutin Sains & Islam', 'Ramadhan di FMIPA', 'Bina Karakter Insani'],
+            kategori: 'Kaderisasi & Karakter',
+            tagline: 'Studi Islam, Sinergi Sains & Syiar Dakwah',
+            deskripsi: 'Pembinaan spiritualitas moral, sinergi wawasan sains dan nilai Islam, serta publikasi syiar dakwah kreatif di civitas akademika.',
+            proker: ['SIGMA', 'SINTESIS', 'Pamflet Syiar Islam'],
             link: '/about/rohis'
-        },
-        {
-            id: 'akademik',
-            nama: 'Bidang Akademik & Riset',
-            kategori: 'Akademik & Bakat',
-            tagline: 'Pengembangan Sains & Advokasi UKT',
-            deskripsi: 'Mengawal isu akademik perkuliahan, klinik advokasi bantuan UKT/beasiswa, workshop PKM, dan delegasi kompetisi sains.',
-            proker: ['Klinik Advokasi UKT Terpadu', 'MIPA Scientific Training', 'Workshop PKM & Jurnal'],
-            link: '/about/akademik'
-        },
-        {
-            id: 'miba',
-            nama: 'Bidang Minat & Bakat',
-            kategori: 'Akademik & Bakat',
-            tagline: 'Apresiasi Prestasi Olahraga & Seni',
-            deskripsi: 'Memfasilitasi potensi non-akademik mahasiswa dalam turnamen keolahragaan, kompetisi esports, dan kreativitas seni budaya.',
-            proker: ['MIPA Olympiad & Sports', 'Kompetisi E-Sports FMIPA', 'Pentas Kreasi Seni Mahasiswa'],
-            link: '/about/miba'
-        },
-        {
-            id: 'eksternal',
-            nama: 'Bidang Hubungan Eksternal',
-            kategori: 'Relasi & Kesekretariatan',
-            tagline: 'Jejaring Kampus & Pengabdian Sosial',
-            deskripsi: 'Membangun sinergi kemitraan antar-BEM kampus, program Bina Desa, serta respons advokasi sosial kemasyarakatan.',
-            proker: ['MIPA Mengabdi ke Desa', 'Studi Banding Antar-BEM', 'Forum Komunikasi Alumni'],
-            link: '/about/eksternal'
-        },
-        {
-            id: 'kesekretariatan',
-            nama: 'Biro Kesekretariatan',
-            kategori: 'Relasi & Kesekretariatan',
-            tagline: 'Arsip, Inventaris & Rumah BEM',
-            deskripsi: 'Digitalisasi administrasi persuratan, inventaris fasilitas kelembagaan, dan pemeliharaan kenyamanan gedung sekretariat BEM.',
-            proker: ['Digitalisasi Persuratan Terpadu', 'SOP Inventaris & Peminjaman', 'Pemeliharaan Gedung Sekretariat'],
-            link: '/about/kesek'
         }
     ];
 
@@ -129,7 +129,7 @@ export default function DynamicBidangShowcase() {
                                 margin: '4px 0 0',
                                 letterSpacing: '-0.02em'
                             }}>
-                                Bidang & Biro <span style={{ color: '#FFE500' }}>BEM FMIPA Unhas</span>
+                                Bidang Kerja <span style={{ color: '#FFE500' }}>BEM FMIPA Unhas</span>
                             </h2>
                         </div>
                         <p style={{
@@ -139,7 +139,7 @@ export default function DynamicBidangShowcase() {
                             margin: 0,
                             lineHeight: 1.5
                         }}>
-                            8 entitas kerja eksekutif & legislatif yang menjalankan fungsi pelayanan advokasi, pengembangan nalar sains, dan kaderisasi mahasiswa.
+                            Sinergi kepengurusan BEM FMIPA Unhas Periode 2026 yang terdiri dari Pimpinan Inti, Dewan Perwakilan Anggota, serta 6 Bidang Kerja strategis.
                         </p>
                     </div>
                 </div>

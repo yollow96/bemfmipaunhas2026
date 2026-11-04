@@ -9,6 +9,10 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Favicons -->
+    <link href="{{ asset('assets/img/logokmfterbaru.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('assets/img/logokmfterbaru.png') }}" rel="apple-touch-icon">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">

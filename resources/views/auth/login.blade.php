@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Portal - BEM FMIPA Unhas</title>
-  <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+  <link rel="icon" href="{{ asset('assets/img/logokmfterbaru.png') }}" type="image/png">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
   <link rel="stylesheet" href="{{ asset('assets/css/auth.css') }}">
 </head>

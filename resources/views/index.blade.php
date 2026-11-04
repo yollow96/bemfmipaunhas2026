@@ -234,9 +234,8 @@
         </div>
     </section>
 
-    <!-- ======= Dynamic React / Fallback Hero Stats Counter ======= -->
-    <!-- ======= Hero Stats Counter (React + Static Utilitarian Fallback) ======= -->
-    <div id="react-hero-stats">
+    <!-- ======= Dynamic Hero Stats Counter ======= -->
+    <div id="hero-stats-wrapper">
         <div style="position: relative; z-index: 10; margin-top: -32px; margin-bottom: 36px;">
             <div class="container">
                 <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 20px 24px;">
@@ -244,7 +243,7 @@
                         <div class="col-6 col-lg-3">
                             <div style="border-right: 1px solid #1f1f23; padding-right: 12px;">
                                 <div class="d-flex align-items-baseline gap-1">
-                                    <span style="font-size: 28px; font-weight: 800; color: #fafafa; line-height: 1.1;">6</span>
+                                    <span class="hero-counter-value" data-target="6" data-suffix="" style="font-size: 28px; font-weight: 800; color: #fafafa; line-height: 1.1;">6</span>
                                     <span style="width: 6px; height: 6px; background-color: #FFE500; display: inline-block;"></span>
                                 </div>
                                 <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Departemen Sains</div>
@@ -255,29 +254,29 @@
                         <div class="col-6 col-lg-3">
                             <div style="border-right: 1px solid #1f1f23; padding-right: 12px;">
                                 <div class="d-flex align-items-baseline gap-1">
-                                    <span style="font-size: 28px; font-weight: 800; color: #fafafa; line-height: 1.1;">8</span>
+                                    <span class="hero-counter-value" data-target="6" data-suffix="" style="font-size: 28px; font-weight: 800; color: #fafafa; line-height: 1.1;">6</span>
                                     <span style="width: 6px; height: 6px; background-color: #FFE500; display: inline-block;"></span>
                                 </div>
-                                <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Bidang & Biro Kerja</div>
-                                <div style="font-size: 11.5px; color: #71717a; margin-top: 2px;">Pimpinan, dewan perwakilan, advokasi, dan kaderisasi</div>
+                                <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Bidang Kerja BEM</div>
+                                <div style="font-size: 11.5px; color: #71717a; margin-top: 2px;">Pengaderan, Kastrat, Humas, Akademik, Kesekretariatan, Rohis</div>
                             </div>
                         </div>
 
                         <div class="col-6 col-lg-3">
                             <div style="border-right: 1px solid #1f1f23; padding-right: 12px;">
                                 <div class="d-flex align-items-baseline gap-1">
-                                    <span style="font-size: 28px; font-weight: 800; color: #fafafa; line-height: 1.1;">50+</span>
+                                    <span class="hero-counter-value" data-target="10" data-suffix="" style="font-size: 28px; font-weight: 800; color: #fafafa; line-height: 1.1;">10</span>
                                     <span style="width: 6px; height: 6px; background-color: #FFE500; display: inline-block;"></span>
                                 </div>
-                                <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Program Kerja Nyata</div>
-                                <div style="font-size: 11.5px; color: #71717a; margin-top: 2px;">Kompetisi ilmiah, advokasi UKT, dan pengabdian desa</div>
+                                <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Program Kerja 2026</div>
+                                <div style="font-size: 11.5px; color: #71717a; margin-top: 2px;">PROGRESIP, Agora MIPA, MIPA Mengabdi, Harmonia, SIGMA, dll.</div>
                             </div>
                         </div>
 
                         <div class="col-6 col-lg-3">
                             <div>
                                 <div class="d-flex align-items-baseline gap-1">
-                                    <span style="font-size: 28px; font-weight: 800; color: #fafafa; line-height: 1.1;">3.500+</span>
+                                    <span class="hero-counter-value" data-target="1000" data-suffix="+" style="font-size: 28px; font-weight: 800; color: #fafafa; line-height: 1.1;">1.000+</span>
                                     <span style="width: 6px; height: 6px; background-color: #FFE500; display: inline-block;"></span>
                                 </div>
                                 <div style="font-size: 13px; font-weight: 600; color: #a1a1aa; margin-top: 4px;">Mahasiswa Aktif</div>
@@ -289,6 +288,32 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".hero-counter-value");
+            counters.forEach(counter => {
+                const target = +counter.getAttribute("data-target");
+                const suffix = counter.getAttribute("data-suffix") || "";
+                if (!target) return;
+                const duration = 1000;
+                const steps = 25;
+                const stepTime = duration / steps;
+                let step = 0;
+                const timer = setInterval(() => {
+                    step++;
+                    const progress = Math.min(step / steps, 1);
+                    const easeOut = 1 - Math.pow(1 - progress, 2);
+                    const current = Math.round(target * easeOut);
+                    counter.innerText = current.toLocaleString('id-ID') + suffix;
+                    if (step >= steps) {
+                        clearInterval(timer);
+                        counter.innerText = target.toLocaleString('id-ID') + suffix;
+                    }
+                }, stepTime);
+            });
+        });
+    </script>
 @endsection
 
 @section('content')
@@ -388,93 +413,90 @@
         <!-- ======= SECTION 2: VISI & MISI BEM FMIPA UNHAS ======= -->
         <section id="visi-misi" class="py-5" style="background-color: #09090b; border-top: 1px solid #1f1f23;">
             <div class="container" data-aos="fade-up">
-                <div class="mb-4 text-center">
-                    <span style="font-size: 11px; font-weight: 700; color: #FFE500; text-transform: uppercase; letter-spacing: 0.08em;">
-                        Landasan Gerak Organisasi
-                    </span>
-                    <h2 class="fw-bold text-white" style="font-size: 1.85rem; margin-top: 4px;">
-                        Visi & Misi <span style="color: #FFE500;">BEM FMIPA Unhas</span>
+                <div class="mb-5 text-center">
+                    <h2 class="fw-bold text-white" style="font-size: 1.85rem; margin: 0;">
+                        VISI & MISI <span style="color: #FFE500;">BEM FMIPA Unhas Periode 2026</span>
                     </h2>
-                    <p style="color: #a1a1aa; max-width: 600px; margin: 4px auto 0; font-size: 13.5px;">
-                        Pilar komitmen strategis dalam menjalankan amanah kelembagaan, memperjuangkan hak mahasiswa, dan memajukan marwah sains.
-                    </p>
                 </div>
 
-                <div class="row g-3">
+                <div class="row g-4 align-items-stretch">
                     <!-- VISI CARD -->
                     <div class="col-lg-5">
                         <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 28px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
-                                <span style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 6px; border-radius: 2px;">
-                                    VISI UTAMA
-                                </span>
-                                <h3 class="text-white fw-bold my-3" style="font-size: 1.25rem; line-height: 1.4;">
-                                    Mewujudkan BEM FMIPA Unhas sebagai Simpul Perjuangan yang <span style="color: #FFE500;">Progresif, Inklusif, dan Berintegritas Ilmiah</span>
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 800; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px;">
+                                        VISI
+                                    </span>
+                                </div>
+                                <h3 class="text-white fw-bold mb-3" style="font-size: 1.15rem; line-height: 1.6;">
+                                    Mewujudkan KM FMIPA Unhas menjadi rumah inklusif yang <span style="color: #FFE500;">progresip, kolaboratif, dan aspiratif</span> bagi semua anggota sebagai representatif tercapainya tujuan pendidikan nasional yang dilandaskan pada tri dharma perguruan tinggi dengan pendekatan keilmuan sains (MIPA).
                                 </h3>
-                                <p style="color: #a1a1aa; font-size: 13px; line-height: 1.7; margin: 0;">
-                                    Menjadi wadah eksekutif yang adaptif terhadap dinamika zaman, solutif dalam pengawalan hak-hak mahasiswa, dan terdepan dalam mengakselerasi potensi akademik serta karya sains bagi masyarakat.
-                                </p>
                             </div>
                             <div class="pt-3 border-top mt-4" style="border-color: #1f1f23 !important;">
-                                <div style="font-size: 12px; color: #fafafa; font-weight: 600;">Berasaskan Tri Dharma Perguruan Tinggi</div>
-                                <div style="font-size: 11px; color: #71717a;">Fakultas MIPA Universitas Hasanuddin</div>
+                                <div style="font-size: 12px; color: #FFE500; font-weight: 600;">Tri Dharma Perguruan Tinggi & Keilmuan Sains</div>
+                                <div style="font-size: 11px; color: #71717a;">BEM FMIPA Universitas Hasanuddin Periode 2026</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 4 MISI ITEMS -->
+                    <!-- 5 MISI ITEMS -->
                     <div class="col-lg-7">
-                        <div class="row g-2 h-100">
-                            <div class="col-md-6">
-                                <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 18px; height: 100%;">
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">01</span>
-                                        <h5 class="text-white fw-bold m-0" style="font-size: 14px;">Advokasi Aspiratif</h5>
-                                    </div>
-                                    <p class="m-0" style="color: #a1a1aa; font-size: 12px; line-height: 1.5;">
-                                        Mengawal secara proaktif kebijakan kampus, transparansi penyesuaian UKT, ketersediaan fasilitas laboratorium, dan kesejahteraan seluruh mahasiswa FMIPA.
+                        <div class="d-flex flex-column gap-2 h-100 justify-content-between">
+                            <!-- 01 -->
+                            <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 14px 16px;">
+                                <div class="d-flex align-items-start gap-3">
+                                    <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 2px 7px; border-radius: 2px; flex-shrink: 0; margin-top: 2px;">01</span>
+                                    <p class="m-0" style="color: #d4d4d8; font-size: 12.5px; line-height: 1.55;">
+                                        Menguatkan nilai-nilai pengaderan dan kulturisasi organisasi antar anggota dan lembaga didalamnya sebagai pilar utama dalam menumbuhkan rasa kepemilikan secara inklusif.
                                     </p>
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 18px; height: 100%;">
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">02</span>
-                                        <h5 class="text-white fw-bold m-0" style="font-size: 14px;">Katalisator Riset Sains</h5>
-                                    </div>
-                                    <p class="m-0" style="color: #a1a1aa; font-size: 12px; line-height: 1.5;">
-                                        Menumbuhkan iklim intelektual, olimpiade sains, penulisan PKM, publikasi jurnal, dan inovasi teknologi terapan mahasiswa di tingkat nasional.
+                            <!-- 02 -->
+                            <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 14px 16px;">
+                                <div class="d-flex align-items-start gap-3">
+                                    <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 2px 7px; border-radius: 2px; flex-shrink: 0; margin-top: 2px;">02</span>
+                                    <p class="m-0" style="color: #d4d4d8; font-size: 12.5px; line-height: 1.55;">
+                                        Mendorong kultur intelektual dengan pendekatan keilmuan sains (MIPA) dalam pengelolaan, kerja-kerja maupun dalam pengambilan keputusan organisasi.
                                     </p>
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 18px; height: 100%;">
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">03</span>
-                                        <h5 class="text-white fw-bold m-0" style="font-size: 14px;">Kaderisasi Berkarakter</h5>
-                                    </div>
-                                    <p class="m-0" style="color: #a1a1aa; font-size: 12px; line-height: 1.5;">
-                                        Menyelenggarakan pembinaan kepemimpinan mahasiswa bertahap (LKM) yang berkarakter saintis, berintegritas moral, dan adaptif menghadapi tantangan.
+                            <!-- 03 -->
+                            <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 14px 16px;">
+                                <div class="d-flex align-items-start gap-3">
+                                    <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 2px 7px; border-radius: 2px; flex-shrink: 0; margin-top: 2px;">03</span>
+                                    <p class="m-0" style="color: #d4d4d8; font-size: 12.5px; line-height: 1.55;">
+                                        Meningkatkan sinergi antar lembaga internal yang struktural dan koordinatif sebagai satu integral yang kuat didalam KM FMIPA Unhas, serta memperluas jaringan dengan eksternal sebagai representatif organisasi kemahasiswaan yang mewadahi aspirasi anggota.
                                     </p>
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 18px; height: 100%;">
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">04</span>
-                                        <h5 class="text-white fw-bold m-0" style="font-size: 14px;">Sinergi & Pengabdian</h5>
-                                    </div>
-                                    <p class="m-0" style="color: #a1a1aa; font-size: 12px; line-height: 1.5;">
-                                        Mempererat soliditas 6 himpunan departemen serta terjun langsung mengabdi ke masyarakat melalui program bina desa saintifik yang solutif.
+                            <!-- 04 -->
+                            <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 14px 16px;">
+                                <div class="d-flex align-items-start gap-3">
+                                    <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 2px 7px; border-radius: 2px; flex-shrink: 0; margin-top: 2px;">04</span>
+                                    <p class="m-0" style="color: #d4d4d8; font-size: 12.5px; line-height: 1.55;">
+                                        Mendorong kesadaran kritis anggota yang reflektif dan aktif dalam menjalankan peran dan fungsi kemahasiswaan nya, beserta peka terhadap isu-isu dan dinamika sosial yang terjadi di Masyarakat.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 05 -->
+                            <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 14px 16px;">
+                                <div class="d-flex align-items-start gap-3">
+                                    <span style="font-size: 11px; font-weight: 800; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 2px 7px; border-radius: 2px; flex-shrink: 0; margin-top: 2px;">05</span>
+                                    <p class="m-0" style="color: #d4d4d8; font-size: 12.5px; line-height: 1.55;">
+                                        Menghadirkan program kerja yang struktural, sistematis, konstekstual, dan terarah dalam mewadahi ruang pertukaran ilmu pengetahuan, kepemimpinan, dan adovakasi.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
             </div>
         </section>
 
@@ -489,14 +511,14 @@
                         Himpunan Mahasiswa Departemen <span style="color: #FFE500;">FMIPA Unhas</span>
                     </h2>
                     <p style="color: #a1a1aa; max-width: 620px; margin: 4px auto 0; font-size: 13.5px;">
-                        Enam simpul kekuatan disiplin sains yang bersatu di bawah naungan BEM FMIPA Universitas Hasanuddin.
+                        Enam simpul kekuatan disiplin sains yang berintegral dengan BEM FMIPA Universitas Hasanuddin.
                     </p>
                 </div>
 
                 <div class="row g-3 justify-content-center">
                     <!-- 1. HIMATIKA -->
                     <div class="col-md-6 col-lg-4">
-                        <a href="https://math.sci.unhas.ac.id/" target="_blank" class="himpunan-card">
+                        <a href="https://himatikafmipaunhas.id" target="_blank" class="himpunan-card">
                             <div class="mb-2">
                                 <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em;">
                                     MATEMATIKA
@@ -509,7 +531,7 @@
 
                     <!-- 2. HIMASTAT -->
                     <div class="col-md-6 col-lg-4">
-                        <a href="https://himastat.sci.unhas.ac.id/" target="_blank" class="himpunan-card">
+                        <a href="https://himastat.sci.unhas.ac.id" target="_blank" class="himpunan-card">
                             <div class="mb-2">
                                 <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em;">
                                     STATISTIKA
@@ -522,7 +544,7 @@
 
                     <!-- 3. HMK -->
                     <div class="col-md-6 col-lg-4">
-                        <a href="https://kimia.sci.unhas.ac.id/" target="_blank" class="himpunan-card">
+                        <a href="https://sl1nk.com/p2fr9su" target="_blank" class="himpunan-card">
                             <div class="mb-2">
                                 <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em;">
                                     KIMIA
@@ -535,7 +557,7 @@
 
                     <!-- 4. HIMAFI -->
                     <div class="col-md-6 col-lg-4">
-                        <a href="https://fisika.sci.unhas.ac.id/" target="_blank" class="himpunan-card">
+                        <a href="https://himafi.sci.unhas.ac.id" target="_blank" class="himpunan-card">
                             <div class="mb-2">
                                 <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em;">
                                     FISIKA
@@ -548,7 +570,7 @@
 
                     <!-- 5. HMGF -->
                     <div class="col-md-6 col-lg-4">
-                        <a href="https://geofisika.sci.unhas.ac.id/" target="_blank" class="himpunan-card">
+                        <a href="https://hmgf.sci.unhas.ac.id" target="_blank" class="himpunan-card">
                             <div class="mb-2">
                                 <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em;">
                                     GEOFISIKA
@@ -561,7 +583,7 @@
 
                     <!-- 6. HIMBIO -->
                     <div class="col-md-6 col-lg-4">
-                        <a href="https://biologi.sci.unhas.ac.id/" target="_blank" class="himpunan-card">
+                        <a href="https://himbiofmipaunhas001.blogspot.com" target="_blank" class="himpunan-card">
                             <div class="mb-2">
                                 <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3); font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em;">
                                     BIOLOGI
@@ -623,171 +645,181 @@
             </div>
         </section>
 
-        <!-- ======= SECTION 5: BIDANG & BIRO SHOWCASE ======= -->
-        <div id="react-bidang-showcase">
+        <!-- ======= SECTION 5: BIDANG KERJA BEM FMIPA UNHAS ======= -->
+        <div id="bidang-showcase-section">
             <section id="bidang-showcase" class="py-5" style="background-color: #050505;">
                 <div class="container" data-aos="fade-up">
                     <div class="text-center mb-5">
                         <div class="fmipa-badge mb-2">
-                            <span class="fmipa-badge-dot"></span> Struktur & Departemen Kerja
+                            <span class="fmipa-badge-dot"></span> Struktur Organisasi Bidang
                         </div>
                         <h2 class="display-6 fw-bold text-white">
-                            Bidang & Biro <span style="color: #FFFF00;">BEM FMIPA Unhas</span>
+                            Bidang Kerja <span style="color: #FFE500;">BEM FMIPA Unhas</span>
                         </h2>
                         <p style="color: #a0a0a0; max-width: 680px; margin: 0 auto; font-size: 15px;">
-                            Sinergi pilar organisasi yang bergerak dinamis dalam melayani, mengayomi, dan mengaktualisasikan seluruh potensi mahasiswa FMIPA Unhas.
+                            6 Bidang Kerja resmi BEM FMIPA Unhas Periode 2026 berdasarkan rancangan program kerja yang disahkan oleh Ketua Umum Adrian Tri Saputra.
                         </p>
                     </div>
 
                     <div class="row g-4">
-                        <!-- 1. Inti -->
-                        <div class="col-md-6 col-lg-3">
-                            <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-3">
-                                        <i class="bi bi-award-fill text-warning fs-4"></i>
-                                        <h5 class="text-white fw-bold m-0">Struktur Inti</h5>
-                                    </div>
-                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFFF00; border: 1px solid rgba(255, 255, 0, 0.3);">Pimpinan & Dewan</small>
-                                    <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                                        Ketua Umum, Sekretaris Umum, dan Bendahara Umum yang mengarahkan arah gerak strategis organisasi.
-                                    </p>
-                                </div>
-                                <a href="/about/inti" class="fmipa-btn-card">
-                                    Detail Struktur <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 2. Dewan -->
-                        <div class="col-md-6 col-lg-3">
-                            <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-3">
-                                        <i class="bi bi-bank2 text-warning fs-4"></i>
-                                        <h5 class="text-white fw-bold m-0">Dewan Mahasiswa</h5>
-                                    </div>
-                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFFF00; border: 1px solid rgba(255, 255, 0, 0.3);">Pimpinan & Dewan</small>
-                                    <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                                        Fungsi legislasi, pengawasan kinerja eksekutif, dan perumusan produk hukum formal mahasiswa FMIPA.
-                                    </p>
-                                </div>
-                                <a href="/about/dewan" class="fmipa-btn-card">
-                                    Detail Struktur <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 3. Pengaderan -->
-                        <div class="col-md-6 col-lg-3">
+                        <!-- 1. Bidang Pengaderan -->
+                        <div class="col-md-6 col-lg-4">
                             <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="d-flex align-items-center gap-2 mb-3">
                                         <i class="bi bi-compass-fill text-warning fs-4"></i>
-                                        <h5 class="text-white fw-bold m-0">Pengaderan</h5>
+                                        <h5 class="text-white fw-bold m-0">Bidang Pengaderan</h5>
                                     </div>
-                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFFF00; border: 1px solid rgba(255, 255, 0, 0.3);">Internal & Kader</small>
-                                    <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                                        Merumuskan dan mengawal kurikulum kaderisasi Latihan Kepemimpinan Mahasiswa (LKM) berkarakter.
+                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFE500; border: 1px solid rgba(255, 255, 0, 0.3);">Kaderisasi & Karakter Insan</small>
+                                    <p style="color: #999; font-size: 13px; line-height: 1.6; margin-bottom: 14px;">
+                                        Merumuskan dan mengawal proses pengaderan anggota BEM FMIPA Unhas yang berkarakter tangguh, kritis, dan berintegritas.
                                     </p>
+                                    <div style="border-top: 1px solid #1f1f23; padding-top: 10px; margin-bottom: 14px;">
+                                        <div style="font-size: 11px; font-weight: 700; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Program Prioritas 2026:</div>
+                                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; color: #d4d4d8;">
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> PROGRESIP 2026 (TW I)</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> Program Pengembangan Kader / PPK (TW I)</li>
+                                            <li><i class="bi bi-check2 text-warning me-1"></i> Kader Siang dan Kader Malam</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <a href="/about/pengaderan" class="fmipa-btn-card">
-                                    Detail Struktur <i class="bi bi-arrow-right ms-1"></i>
+                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
 
-                        <!-- 4. Rohis -->
-                        <div class="col-md-6 col-lg-3">
+                        <!-- 2. Bidang Kajian Strategis dan Advokasi -->
+                        <div class="col-md-6 col-lg-4">
                             <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="d-flex align-items-center gap-2 mb-3">
-                                        <i class="bi bi-moon-stars-fill text-warning fs-4"></i>
-                                        <h5 class="text-white fw-bold m-0">Kerohanian</h5>
+                                        <i class="bi bi-megaphone-fill text-warning fs-4"></i>
+                                        <h5 class="text-white fw-bold m-0">Bidang Kajian Strategis dan Advokasi</h5>
                                     </div>
-                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFFF00; border: 1px solid rgba(255, 255, 0, 0.3);">Internal & Moral</small>
-                                    <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                                        Pembinaan nilai-nilai spiritual, moralitas intelektual, dan penguatan toleransi civitas akademika.
+                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFE500; border: 1px solid rgba(255, 255, 0, 0.3);">Kajian Isu & Advokasi Aspiratif</small>
+                                    <p style="color: #999; font-size: 13px; line-height: 1.6; margin-bottom: 14px;">
+                                        Garda terdepan pengawalan isu strategis kebijakan kampus, peradaban, serta advokasi hak dan fasilitas sarana akademik mahasiswa.
                                     </p>
+                                    <div style="border-top: 1px solid #1f1f23; padding-top: 10px; margin-bottom: 14px;">
+                                        <div style="font-size: 11px; font-weight: 700; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Program Prioritas 2026:</div>
+                                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; color: #d4d4d8;">
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> Agora MIPA (TW II)</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> Kajian Kebijakan & Isu Strategis Kampus</li>
+                                            <li><i class="bi bi-check2 text-warning me-1"></i> Advokasi Fasilitas & Sarana Mahasiswa</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <a href="/about/rohis" class="fmipa-btn-card">
-                                    Detail Struktur <i class="bi bi-arrow-right ms-1"></i>
+                                <a href="/about/advokasi" class="fmipa-btn-card">
+                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
 
-                        <!-- 5. Akademik & Riset -->
-                        <div class="col-md-6 col-lg-3">
+                        <!-- 3. Bidang Hubungan Masyarakat -->
+                        <div class="col-md-6 col-lg-4">
                             <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="d-flex align-items-center gap-2 mb-3">
-                                        <i class="bi bi-book-half text-warning fs-4"></i>
-                                        <h5 class="text-white fw-bold m-0">Akademik & Riset</h5>
+                                        <i class="bi bi-people-fill text-warning fs-4"></i>
+                                        <h5 class="text-white fw-bold m-0">Bidang Hubungan Masyarakat</h5>
                                     </div>
-                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFFF00; border: 1px solid rgba(255, 255, 0, 0.3);">Akademik & Bakat</small>
-                                    <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                                        Mengawal isu fasilitas kuliah, klinik advokasi UKT, workshop PKM, dan kompetisi sains ilmiah.
+                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFE500; border: 1px solid rgba(255, 255, 0, 0.3);">Kemitraan Publik & Pengabdian</small>
+                                    <p style="color: #999; font-size: 13px; line-height: 1.6; margin-bottom: 14px;">
+                                        Jembatan relasi kemitraan eksternal, diseminasi informasi publik, kelestarian lingkungan, dan aksi pengabdian masyarakat nyata berbasis sains.
                                     </p>
+                                    <div style="border-top: 1px solid #1f1f23; padding-top: 10px; margin-bottom: 14px;">
+                                        <div style="font-size: 11px; font-weight: 700; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Program Prioritas 2026:</div>
+                                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; color: #d4d4d8;">
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> MIPA Mengabdi (TW II)</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> Kemitraan Strategis & Branding Lembaga</li>
+                                            <li><i class="bi bi-check2 text-warning me-1"></i> Aksi Kepedulian Lingkungan Hidup</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="/about/humas" class="fmipa-btn-card">
+                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 4. Bidang Akademik dan Kemahasiswaan -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <i class="bi bi-mortarboard-fill text-warning fs-4"></i>
+                                        <h5 class="text-white fw-bold m-0">Bidang Akademik & Kemahasiswaan</h5>
+                                    </div>
+                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFE500; border: 1px solid rgba(255, 255, 0, 0.3);">Pelayanan Akademik & Wisuda</small>
+                                    <p style="color: #999; font-size: 13px; line-height: 1.6; margin-bottom: 14px;">
+                                        Menjalankan pengawalan pelayanan akademik, pendampingan hak-hak mahasiswa, serta seremoni penghargaan status keanggotaan.
+                                    </p>
+                                    <div style="border-top: 1px solid #1f1f23; padding-top: 10px; margin-bottom: 14px;">
+                                        <div style="font-size: 11px; font-weight: 700; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Program Prioritas 2026:</div>
+                                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; color: #d4d4d8;">
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> Pelepasan Wisudawan (Setiap Wisuda)</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> Pusat Layanan Informasi Akademik</li>
+                                            <li><i class="bi bi-check2 text-warning me-1"></i> Pendampingan Urusan Mahasiswa</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <a href="/about/akademik" class="fmipa-btn-card">
-                                    Detail Struktur <i class="bi bi-arrow-right ms-1"></i>
+                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
 
-                        <!-- 6. Minat & Bakat -->
-                        <div class="col-md-6 col-lg-3">
-                            <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-3">
-                                        <i class="bi bi-trophy-fill text-warning fs-4"></i>
-                                        <h5 class="text-white fw-bold m-0">Minat & Bakat</h5>
-                                    </div>
-                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFFF00; border: 1px solid rgba(255, 255, 0, 0.3);">Akademik & Bakat</small>
-                                    <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                                        Apresiasi potensi mahasiswa dalam cabang keolahragaan, turnamen esports, dan seni budaya.
-                                    </p>
-                                </div>
-                                <a href="/about/miba" class="fmipa-btn-card">
-                                    Detail Struktur <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 7. Hubungan Eksternal -->
-                        <div class="col-md-6 col-lg-3">
-                            <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
-                                <div>
-                                    <div class="d-flex align-items-center gap-2 mb-3">
-                                        <i class="bi bi-globe2 text-warning fs-4"></i>
-                                        <h5 class="text-white fw-bold m-0">Hubungan Eksternal</h5>
-                                    </div>
-                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFFF00; border: 1px solid rgba(255, 255, 0, 0.3);">Relasi & Isu Publik</small>
-                                    <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                                        Membangun jejaring antar-BEM kampus, program Bina Desa, serta respons advokasi sosial masyarakat.
-                                    </p>
-                                </div>
-                                <a href="/about/eksternal" class="fmipa-btn-card">
-                                    Detail Struktur <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 8. Biro Kesekretariatan -->
-                        <div class="col-md-6 col-lg-3">
+                        <!-- 5. Bidang Kesekretariatan -->
+                        <div class="col-md-6 col-lg-4">
                             <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="d-flex align-items-center gap-2 mb-3">
                                         <i class="bi bi-folder-check text-warning fs-4"></i>
-                                        <h5 class="text-white fw-bold m-0">Kesekretariatan</h5>
+                                        <h5 class="text-white fw-bold m-0">Bidang Kesekretariatan</h5>
                                     </div>
-                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFFF00; border: 1px solid rgba(255, 255, 0, 0.3);">Administrasi & Rumah</small>
-                                    <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                                        Digitalisasi administrasi persuratan, inventaris, dan kenyamanan operasional gedung sekretariat BEM.
+                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFE500; border: 1px solid rgba(255, 255, 0, 0.3);">Tata Kelola & Kesekretariatan</small>
+                                    <p style="color: #999; font-size: 13px; line-height: 1.6; margin-bottom: 14px;">
+                                        Pengelolaan tertib administrasi, kearsipan surat, inventarisasi aset, dan penciptaan lingkungan sekretariat yang representatif.
                                     </p>
+                                    <div style="border-top: 1px solid #1f1f23; padding-top: 10px; margin-bottom: 14px;">
+                                        <div style="font-size: 11px; font-weight: 700; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Program Prioritas 2026:</div>
+                                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; color: #d4d4d8;">
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> Harmonia (2 Kali/Periode)</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> Optimalisasi Tata Kelola Persuratan & Aset</li>
+                                            <li><i class="bi bi-check2 text-warning me-1"></i> Pengelolaan Rumah Tangga & Inventaris BEM</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <a href="/about/kesek" class="fmipa-btn-card">
-                                    Detail Struktur <i class="bi bi-arrow-right ms-1"></i>
+                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 6. Bidang Kerohanian Islam -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="fmipa-card h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <i class="bi bi-moon-stars-fill text-warning fs-4"></i>
+                                        <h5 class="text-white fw-bold m-0">Bidang Kerohanian Islam</h5>
+                                    </div>
+                                    <small class="badge mb-2" style="background: rgba(255, 255, 0, 0.1); color: #FFE500; border: 1px solid rgba(255, 255, 0, 0.3);">Spiritualitas, Sains & Syiar Islam</small>
+                                    <p style="color: #999; font-size: 13px; line-height: 1.6; margin-bottom: 14px;">
+                                        Pembinaan karakter moral dan spiritual islami, pengintegrasian sains dengan nilai Islam, serta dakwah kreatif civitas akademika.
+                                    </p>
+                                    <div style="border-top: 1px solid #1f1f23; padding-top: 10px; margin-bottom: 14px;">
+                                        <div style="font-size: 11px; font-weight: 700; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Program Prioritas 2026:</div>
+                                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; color: #d4d4d8;">
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> SIGMA (TW II)</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-warning me-1"></i> SINTESIS (1 Kali/Periode)</li>
+                                            <li><i class="bi bi-check2 text-warning me-1"></i> Pamflet Syiar Islam (Rutin/Pekan)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="/about/rohis" class="fmipa-btn-card">
+                                    Detail Bidang <i class="bi bi-arrow-right ms-1"></i>
                                 </a>
                             </div>
                         </div>
@@ -861,7 +893,7 @@
         </section>
 
         <!-- ======= SECTION 7: AGENDA & PROGRAM UNGGULAN ======= -->
-        <div id="react-agenda-feed">
+        <div id="agenda-feed-wrapper">
             <section id="agenda" class="py-5" style="background-color: #09090b; border-top: 1px solid #1f1f23;">
                 <div class="container" data-aos="fade-up">
                     <div class="text-center mb-4">
@@ -877,14 +909,14 @@
                         <div class="col-md-6 col-lg-3">
                             <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 16px; height: 100%;">
                                 <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">
-                                    KOMPETISI SAINS
+                                    PENGADERAN • TW I
                                 </span>
-                                <h5 class="text-white fw-bold mt-2 mb-1" style="font-size: 14px;">MIPA Scientific Competition (MSC)</h5>
+                                <h5 class="text-white fw-bold mt-2 mb-1" style="font-size: 14px;">PROGRESIP 2026</h5>
                                 <p style="color: #a1a1aa; font-size: 12px; line-height: 1.4; margin: 0 0 10px;">
-                                    Kompetisi karya tulis ilmiah, olimpiade matematika, dan inovasi sains terapan tingkat nasional.
+                                    Penerimaan anggota baru, pengenalan KM FMIPA Unhas, dan penanaman nilai dasar kemahasiswaan.
                                 </p>
                                 <div style="font-size: 11px; color: #71717a; border-top: 1px solid #1f1f23; padding-top: 8px;">
-                                    Auditorium Unhas
+                                    Kampus FMIPA Unhas
                                 </div>
                             </div>
                         </div>
@@ -892,14 +924,14 @@
                         <div class="col-md-6 col-lg-3">
                             <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 16px; height: 100%;">
                                 <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">
-                                    KADERISASI
+                                    KASTRAT & ADVOKASI • TW II
                                 </span>
-                                <h5 class="text-white fw-bold mt-2 mb-1" style="font-size: 14px;">Latihan Kepemimpinan Mahasiswa (LKM)</h5>
+                                <h5 class="text-white fw-bold mt-2 mb-1" style="font-size: 14px;">Agora MIPA</h5>
                                 <p style="color: #a1a1aa; font-size: 12px; line-height: 1.4; margin: 0 0 10px;">
-                                    Pelatihan kepemimpinan, advokasi, analisis sosial, dan integritas kepengurusan organisasi.
+                                    Ruang diskusi terbuka dan dialogis kritis isu strategis demi meningkatkan kesadaran bersama.
                                 </p>
                                 <div style="font-size: 11px; color: #71717a; border-top: 1px solid #1f1f23; padding-top: 8px;">
-                                    Malino, Kab. Gowa
+                                    Pelataran / Aula FMIPA
                                 </div>
                             </div>
                         </div>
@@ -907,14 +939,14 @@
                         <div class="col-md-6 col-lg-3">
                             <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 16px; height: 100%;">
                                 <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">
-                                    ADVOKASI & AKADEMIK
+                                    HUMAS & PENGABDIAN • TW II
                                 </span>
-                                <h5 class="text-white fw-bold mt-2 mb-1" style="font-size: 14px;">Dialog Terbuka Aspirasi Dekanat</h5>
+                                <h5 class="text-white fw-bold mt-2 mb-1" style="font-size: 14px;">MIPA Mengabdi</h5>
                                 <p style="color: #a1a1aa; font-size: 12px; line-height: 1.4; margin: 0 0 10px;">
-                                    Ruang dialog interaktif pimpinan dekanat bersama mahasiswa terkait fasilitas laboratorium dan UKT.
+                                    Peningkatan kualitas lingkungan hidup melalui edukasi solutif dan aksi pelestarian alam nyata.
                                 </p>
                                 <div style="font-size: 11px; color: #71717a; border-top: 1px solid #1f1f23; padding-top: 8px;">
-                                    Dekanat FMIPA Unhas
+                                    Wilayah Mitra / Masyarakat
                                 </div>
                             </div>
                         </div>
@@ -922,14 +954,14 @@
                         <div class="col-md-6 col-lg-3">
                             <div style="background-color: #111115; border: 1px solid #27272a; border-radius: 4px; padding: 16px; height: 100%;">
                                 <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #FFE500; background-color: #1c1a00; border: 1px solid rgba(255, 229, 0, 0.3); padding: 1px 6px; border-radius: 2px;">
-                                    MINAT & BAKAT
+                                    KEROHANIAN ISLAM • TW II
                                 </span>
-                                <h5 class="text-white fw-bold mt-2 mb-1" style="font-size: 14px;">MIPA Sports & E-Sports League</h5>
+                                <h5 class="text-white fw-bold mt-2 mb-1" style="font-size: 14px;">SIGMA & SINTESIS</h5>
                                 <p style="color: #a1a1aa; font-size: 12px; line-height: 1.4; margin: 0 0 10px;">
-                                    Turnamen keolahragaan dan esports antar-departemen memperebutkan piala bergilir.
+                                    Studi Islam Generasi Muslim MIPA dan sinergi pembelajaran syariat berpadu dengan nalar sains.
                                 </p>
                                 <div style="font-size: 11px; color: #71717a; border-top: 1px solid #1f1f23; padding-top: 8px;">
-                                    GOR PKM Unhas
+                                    Musholla / Gedung FMIPA
                                 </div>
                             </div>
                         </div>

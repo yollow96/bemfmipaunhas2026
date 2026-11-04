@@ -54,28 +54,33 @@
         <!-- Program Kerja Section -->
         <div class="container program-section" data-aos="fade-up">
             <div class="row g-4">
-                <!-- Bina Akrab / LKM Program -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="program-item">
+                <!-- 1. PROGRESIP 2026 -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="program-item h-100">
                         <div class="program-photo">
-                            <img src="{{ asset('assets/img/about/pengaderan/binaAkrab2021.JPG') }}" alt="Bina Akrab BEM FMIPA Unhas" width="600" height="260" class="img-fluid">
+                            <img src="{{ asset('assets/img/about/pengaderan/binaAkrab2021.JPG') }}" alt="PROGRESIP 2026 BEM FMIPA Unhas" width="600" height="260" class="img-fluid">
                         </div>
                         <div class="program-info">
-                            <h4 class="program-title">Bina Akrab Mahasiswa FMIPA</h4>
-                            <p class="program-subtitle">Pembinaan Karakter, Keakraban Keluarga MIPA, dan Pengenalan Nilai Saintis</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3);">Triwulan I</span>
+                            </div>
+                            <h4 class="program-title">PROGRESIP 2026</h4>
+                            <p class="program-subtitle">Penerimaan Anggota Baru & Penanaman Nilai Dasar Kemahasiswaan</p>
                             
                             <div class="program-detail">
                                 <div class="detail-content">
                                     <div class="tujuan">
                                         <h5>Tujuan Program</h5>
                                         <ul>
-                                            <li>Mempererat tali persaudaraan dan solidaritas antar mahasiswa baru dan senior se-FMIPA Unhas</li>
-                                            <li>Membangun sikap kebersamaan, etika akademik, integritas moral, dan empati sosial</li>
+                                            <li>Penerimaan anggota baru</li>
+                                            <li>Pengenalan KM FMIPA Unhas</li>
+                                            <li>Penanaman nilai-nilai dasar kemahasiswaan</li>
+                                            <li>Mempererat tali silaturahmi antara anggota dan alumni KM FMIPA Unhas</li>
                                         </ul>
                                     </div>
                                     <div class="sasaran">
                                         <h5>Sasaran</h5>
-                                        <p>Mahasiswa baru dan seluruh keluarga mahasiswa FMIPA Unhas</p>
+                                        <p>Mahasiswa baru dan mahasiswa lama FMIPA Unhas yang ingin menjadi anggota, serta Anggota dan Alumni KM FMIPA Unhas</p>
                                     </div>
                                 </div>
                             </div>
@@ -83,28 +88,63 @@
                     </div>
                 </div>
 
-                <!-- LKM Tingkat Lanjut Program -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="program-item">
+                <!-- 2. Program Pengembangan Kader (PPK) -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="program-item h-100">
                         <div class="program-photo">
-                            <img src="{{ asset('assets/img/about/pengaderan/pengaderan.jpg') }}" alt="LKM BEM FMIPA Unhas" width="600" height="260" class="img-fluid">
+                            <img src="{{ asset('assets/img/about/pengaderan/pengaderan.jpg') }}" alt="Program Pengembangan Kader (PPK)" width="600" height="260" class="img-fluid">
                         </div>
                         <div class="program-info">
-                            <h4 class="program-title">Latihan Kepemimpinan Mahasiswa (LKM)</h4>
-                            <p class="program-subtitle">Kaderisasi Tingkat Menengah: Manajemen Aksi, Negosiasi, dan Kepemimpinan Organisasi</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3);">Triwulan I</span>
+                            </div>
+                            <h4 class="program-title">Program Pengembangan Kader (PPK)</h4>
+                            <p class="program-subtitle">Peningkatan Kapasitas & Kualitas Anggota KM FMIPA Unhas</p>
                             
                             <div class="program-detail">
                                 <div class="detail-content">
                                     <div class="tujuan">
                                         <h5>Tujuan Program</h5>
                                         <ul>
-                                            <li>Mencetak calon-calon pemimpin tangguh bagi kelembagaan FMIPA Unhas</li>
-                                            <li>Membekali kader dengan wawasan hukum konstitusi, teknik diplomasi, dan analisis sosial</li>
+                                            <li>Meningkatkan kapasitas dan integritas anggota KM FMIPA Unhas</li>
                                         </ul>
                                     </div>
                                     <div class="sasaran">
                                         <h5>Sasaran</h5>
-                                        <p>Delegasi aktif perwakilan himpunan mahasiswa departemen</p>
+                                        <p>Anggota KM FMIPA Unhas yang telah lulus LK 1 di HMD (Himpunan Mahasiswa Departemen)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Kader Siang dan Kader Malam -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="program-item h-100">
+                        <div class="program-photo">
+                            <img src="{{ asset('assets/img/about/pengaderan/binaAkrab2021.JPG') }}" alt="Kader Siang dan Kader Malam" width="600" height="260" class="img-fluid">
+                        </div>
+                        <div class="program-info">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3);">Pasca PROGRESIP s.d. Akhir Kepengurusan</span>
+                            </div>
+                            <h4 class="program-title">Kader Siang & Kader Malam</h4>
+                            <p class="program-subtitle">Ruang Pemahaman Dinamika KM FMIPA Unhas & Perluasan Wawasan</p>
+                            
+                            <div class="program-detail">
+                                <div class="detail-content">
+                                    <div class="tujuan">
+                                        <h5>Tujuan Program</h5>
+                                        <ul>
+                                            <li>Memberikan ruang kepada mahasiswa baru untuk memahami dinamika KM FMIPA Unhas</li>
+                                            <li>Membuka dan menambah wawasan kelembagaan</li>
+                                            <li>Mempererat tali silaturahmi antar anggota KM FMIPA Unhas</li>
+                                        </ul>
+                                    </div>
+                                    <div class="sasaran">
+                                        <h5>Sasaran</h5>
+                                        <p>Mahasiswa Baru dan Mahasiswa Lama yang baru melulusi prosesi penerimaan, serta Anggota KM FMIPA Unhas</p>
                                     </div>
                                 </div>
                             </div>

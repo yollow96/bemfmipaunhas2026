@@ -77,7 +77,7 @@
                         <span class="fmipa-badge mb-2"><i class="bi bi-diagram-3"></i> Tata Kelola Lembaga</span>
                         <h2 class="display-6 fw-bold text-white">Struktur <span style="color: #FFE500;">Organisasi BEM FMIPA</span></h2>
                         <p style="color: #94A3B8; max-width: 650px; margin: 0 auto; font-size: 15px;">
-                            Jajaran pimpinan, dewan perwakilan mahasiswa, serta bidang dan biro yang mengawal roda kelembagaan BEM FMIPA Unhas.
+                            Jajaran pimpinan, dewan perwakilan mahasiswa, serta 6 bidang kerja strategis yang mengawal roda kelembagaan BEM FMIPA Unhas Periode 2026.
                         </p>
                     </div>
 
@@ -138,25 +138,7 @@
                                 </div>
                             </div>
 
-                            <!-- Card 4: Kerohanian -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="card" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="face face1">
-                                        <div class="content">
-                                            <img src="{{ asset('assets/img/icon/rohis.png') }}" alt="Bidang Kerohanian">
-                                            <h3>Bidang Kerohanian</h3>
-                                        </div>
-                                    </div>
-                                    <div class="face face2">
-                                        <div class="content">
-                                            <p>Pembinaan spiritualitas, nilai moralitas intelektual, dan ketakwaan civitas akademika.</p>
-                                            <a href="/about/rohis">Lihat Pengurus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 5: Pengaderan -->
+                            <!-- Card 4: Pengaderan -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
@@ -167,80 +149,98 @@
                                     </div>
                                     <div class="face face2">
                                         <div class="content">
-                                            <p>Mengawal kurikulum pembinaan LKM, karakter kepemimpinan saintis tangguh dan adaptif.</p>
+                                            <p>Mengawal kaderisasi berjenjang: PROGRESIP 2026, Program Pengembangan Kader (PPK), serta Kader Siang & Kader Malam.</p>
                                             <a href="/about/pengaderan">Lihat Pengurus</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Card 6: Akademik & Riset -->
+                            <!-- Card 5: Kajian Strategis dan Advokasi -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/akademik.png') }}" alt="Akademik & Riset">
-                                            <h3>Akademik & Riset</h3>
+                                            <img src="{{ asset('assets/img/icon/eksternal.png') }}" alt="Kajian Strategis dan Advokasi">
+                                            <h3>Kajian Strategis & Advokasi</h3>
                                         </div>
                                     </div>
                                     <div class="face face2">
                                         <div class="content">
-                                            <p>Advokasi isu perkuliahan, penyesuaian UKT, bimbingan proposal PKM, dan olimpiade sains.</p>
+                                            <p>Pengawalan isu strategis, advokasi aspirasi mahasiswa, dan ruang dialektika dialogis melalui Agora MIPA.</p>
+                                            <a href="/about/advokasi">Lihat Pengurus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6: Hubungan Masyarakat -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="face face1">
+                                        <div class="content">
+                                            <img src="{{ asset('assets/img/icon/eksternal.png') }}" alt="Hubungan Masyarakat">
+                                            <h3>Hubungan Masyarakat</h3>
+                                        </div>
+                                    </div>
+                                    <div class="face face2">
+                                        <div class="content">
+                                            <p>Jembatan relasi eksternal, kepedulian lingkungan hidup, dan pengabdian nyata melalui MIPA Mengabdi.</p>
+                                            <a href="/about/humas">Lihat Pengurus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 7: Akademik dan Kemahasiswaan -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="face face1">
+                                        <div class="content">
+                                            <img src="{{ asset('assets/img/icon/akademik.png') }}" alt="Akademik dan Kemahasiswaan">
+                                            <h3>Akademik & Kemahasiswaan</h3>
+                                        </div>
+                                    </div>
+                                    <div class="face face2">
+                                        <div class="content">
+                                            <p>Pengawalan hak dan studi mahasiswa, serta pelaksanaan prosesi apresiasi Pelepasan Wisudawan FMIPA.</p>
                                             <a href="/about/akademik">Lihat Pengurus</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Card 7: Minat & Bakat -->
+                            <!-- Card 8: Kesekretariatan -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="card" data-aos="fade-up" data-aos-delay="100">
                                     <div class="face face1">
                                         <div class="content">
-                                            <img src="{{ asset('assets/img/icon/miba.png') }}" alt="Minat & Bakat">
-                                            <h3>Minat & Bakat</h3>
+                                            <img src="{{ asset('assets/img/icon/kesek.png') }}" alt="Bidang Kesekretariatan">
+                                            <h3>Bidang Kesekretariatan</h3>
                                         </div>
                                     </div>
                                     <div class="face face2">
                                         <div class="content">
-                                            <p>Wadah apresiasi dan pengembangan bakat keolahragaan, turnamen esports, dan seni budaya.</p>
-                                            <a href="/about/miba">Lihat Pengurus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 8: Hubungan Eksternal -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="card" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="face face1">
-                                        <div class="content">
-                                            <img src="{{ asset('assets/img/icon/eksternal.png') }}" alt="Hubungan Eksternal">
-                                            <h3>Hubungan Eksternal</h3>
-                                        </div>
-                                    </div>
-                                    <div class="face face2">
-                                        <div class="content">
-                                            <p>Mengkaji isu sosial publik, kemitraan strategis, dan pengabdian masyarakat (MIPA Mengabdi).</p>
-                                            <a href="/about/eksternal">Lihat Pengurus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 9: Kesekretariatan -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="card" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="face face1">
-                                        <div class="content">
-                                            <img src="{{ asset('assets/img/icon/kesek.png') }}" alt="Biro Kesekretariatan">
-                                            <h3>Kesekretariatan</h3>
-                                        </div>
-                                    </div>
-                                    <div class="face face2">
-                                        <div class="content">
-                                            <p>Pengelolaan administrasi persuratan, inventaris fasilitas, dan operasional sekretariat.</p>
+                                            <p>Tata kelola administrasi persuratan, inventarisasi sarana, dan kenyamanan lingkungan sekretariat lewat Harmonia.</p>
                                             <a href="/about/kesek">Lihat Pengurus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 9: Kerohanian Islam -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="face face1">
+                                        <div class="content">
+                                            <img src="{{ asset('assets/img/icon/rohis.png') }}" alt="Bidang Kerohanian Islam">
+                                            <h3>Bidang Kerohanian Islam</h3>
+                                        </div>
+                                    </div>
+                                    <div class="face face2">
+                                        <div class="content">
+                                            <p>Pembinaan spiritualitas dan integrasi sains-syariat melalui program SIGMA, SINTESIS, dan Pamflet Syiar Islam.</p>
+                                            <a href="/about/rohis">Lihat Pengurus</a>
                                         </div>
                                     </div>
                                 </div>

@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Bidang Kerohanian - BEM FMIPA Unhas')
+@section('title', 'Bidang Kerohanian Islam - BEM FMIPA Unhas')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/akademik.css') }}">
@@ -9,13 +9,13 @@
     <div class="breadcrumbs d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('{{ asset('assets/img/sekret.jpeg') }}'); min-height: 280px;">
         <div class="container position-relative d-flex flex-column align-items-center text-center" data-aos="fade">
             <span class="fmipa-badge mb-3">Moral & Spiritual</span>
-            <h2 class="text-white fw-bold mb-2 display-6">Bidang Kerohanian</h2>
+            <h2 class="text-white fw-bold mb-2 display-6">Bidang Kerohanian Islam</h2>
             <ol class="d-flex gap-2 p-0 list-unstyled" style="font-size: 14px;">
                 <li><a href="/" style="color: #FFE500;">Home</a></li>
                 <li style="color: #94a3b8;" aria-hidden="true">/</li>
                 <li><a href="/about" style="color: #FFE500;">About</a></li>
                 <li style="color: #94a3b8;" aria-hidden="true">/</li>
-                <li class="text-white">Kerohanian</li>
+                <li class="text-white">Kerohanian Islam</li>
             </ol>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -33,14 +33,14 @@
                         <span class="fmipa-badge mb-3">
                             <i class="bi bi-heart-fill"></i> Pembinaan Karakter Mulia
                         </span>
-                        <h2>Spirituality & Ethics Division</h2>
+                        <h2>Islamic & Spiritual Affairs Division</h2>
                         <div class="our-story">
-                            <h3>Bidang Kerohanian</h3>
-                            <p>Bidang Kerohanian BEM FMIPA Unhas mewadahi pembinaan spiritual, moralitas intelektual, etika berkeadaban, dan nilai-nilai ketakwaan civitas akademika FMIPA Unhas dalam suasana toleran, inklusif, dan harmonis.</p>
+                            <h3>Bidang Kerohanian Islam</h3>
+                            <p>Bidang Kerohanian Islam BEM FMIPA Unhas mewadahi pembinaan spiritual, ilmu syar'i, pembentukan karakter pecinta Al-Qur'an, serta integrasi nilai-nilai keislaman dengan nalar ilmiah sains demi mempererat silaturahmi dan ukhuwah civitas akademika FMIPA Unhas.</p>
                             <ul>
-                                <li><i class="bi bi-check-circle-fill"></i> <span>MIPA Islamic & Spiritual Sessions</span></li>
-                                <li><i class="bi bi-check-circle-fill"></i> <span>Bakti Sosial & Ramadhan di Kampus FMIPA</span></li>
-                                <li><i class="bi bi-check-circle-fill"></i> <span>Kajian Nalar Etika & Keilmuan Terapan</span></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <span>SIGMA (Studi Islam Generasi Muslim MIPA)</span></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <span>SINTESIS (Sinergi Islam, Tren Isu, Sains, dan Silaturahmi)</span></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <span>Pamflet Syiar Islam Rutin Setiap Pekan</span></li>
                             </ul>
                         </div>
                     </div>
@@ -53,34 +53,39 @@
         <!-- start About proker -->
         <div data-aos="fade-up" class="section-header text-center" style="margin-top: 4em">
             <span class="fmipa-badge mb-2"><i class="bi bi-briefcase"></i> Program Kerja Nyata</span>
-            <h2 class="display-6 fw-bold text-white">Program Kerja <span style="color: #FFFF00;">Bidang Kerohanian</span></h2>
+            <h2 class="display-6 fw-bold text-white">Program Kerja <span style="color: #FFFF00;">Bidang Kerohanian Islam</span></h2>
         </div>
         
         <!-- Program Kerja Section -->
         <div class="container program-section" data-aos="fade-up">
             <div class="row g-4">
-                <!-- MIPA Islamic Session Program -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="program-item">
+                <!-- 1. SIGMA Program -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="program-item h-100">
                         <div class="program-photo">
-                            <img src="{{ asset('assets/img/about/rohis/islamic.jpeg') }}" alt="MIPA Islamic Session BEM FMIPA Unhas" width="600" height="260" class="img-fluid">
+                            <img src="{{ asset('assets/img/about/rohis/islamic.jpeg') }}" alt="SIGMA BEM FMIPA Unhas" width="600" height="260" class="img-fluid">
                         </div>
                         <div class="program-info">
-                            <h4 class="program-title">MIPA Islamic & Spiritual Session</h4>
-                            <p class="program-subtitle">Kajian Rutin Sains & Spiritualitas, Dialog Moral, dan Penguatan Silaturahmi</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3);">Triwulan II</span>
+                            </div>
+                            <h4 class="program-title">SIGMA</h4>
+                            <p class="program-subtitle">Studi Islam Generasi Muslim MIPA: Menuntut Ilmu Syar'i & Karakter Qur'ani</p>
                             
                             <div class="program-detail">
                                 <div class="detail-content">
                                     <div class="tujuan">
                                         <h5>Tujuan Program</h5>
                                         <ul>
-                                            <li>Sebagai sarana pembinaan integritas spiritual mahasiswa sains FMIPA</li>
-                                            <li>Mempererat tali ukhuwah dan silaturahmi antar civitas akademika FMIPA Unhas</li>
+                                            <li>Sebagai wasilah untuk menuntut ilmu syar’i dalam meningkatkan iman dan taqwa</li>
+                                            <li>Membentuk kader yang memahami ilmu-ilmu dasar agama Islam</li>
+                                            <li>Sebagai wasilah untuk mempererat silaturahmi dan ukhuwah</li>
+                                            <li>Membentuk karakter mahasiswa yang cinta akan Al-Quran</li>
                                         </ul>
                                     </div>
                                     <div class="sasaran">
                                         <h5>Sasaran</h5>
-                                        <p>Seluruh mahasiswa FMIPA Unhas dan masyarakat umum</p>
+                                        <p>Mahasiswa Baru Muslim/Muslimah FMIPA Unhas yang Telah Lulus Progresip & Anggota KMF FMIPA Unhas</p>
                                     </div>
                                 </div>
                             </div>
@@ -88,28 +93,64 @@
                     </div>
                 </div>
 
-                <!-- Baksos & Ramadhan Session -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="program-item">
+                <!-- 2. SINTESIS Program -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="program-item h-100">
                         <div class="program-photo">
-                            <img src="{{ asset('assets/img/about/rohis/rohis.jpg') }}" alt="Semarak Berbagi BEM FMIPA Unhas" width="600" height="260" class="img-fluid">
+                            <img src="{{ asset('assets/img/about/rohis/rohis.jpg') }}" alt="SINTESIS BEM FMIPA Unhas" width="600" height="260" class="img-fluid">
                         </div>
                         <div class="program-info">
-                            <h4 class="program-title">Semarak Kepedulian Sosial & Ramadhan</h4>
-                            <p class="program-subtitle">Bakti Sosial, Santunan Anak Panti Asuhan, dan Buka Puasa Bersama KM FMIPA</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3);">1 Kali Selama Periode Kepengurusan</span>
+                            </div>
+                            <h4 class="program-title">SINTESIS</h4>
+                            <p class="program-subtitle">Sinergi Islam, Tren Isu, Sains, dan Silaturahmi: Diskusi Logis Ilmiah & Syariat</p>
                             
                             <div class="program-detail">
                                 <div class="detail-content">
                                     <div class="tujuan">
                                         <h5>Tujuan Program</h5>
                                         <ul>
-                                            <li>Menumbuhkan rasa empati dan kepedulian sosial terhadap masyarakat kurang mampu</li>
-                                            <li>Menghidupkan atmosfer spiritual dan keberkahan di lingkungan FMIPA Unhas</li>
+                                            <li>Menjadi wadah interaktif pembelajaran agama Islam yang berintegrasi dengan dunia sains</li>
+                                            <li>Membahas isu-isu kontemporer saat ini dengan sudut pandang logis ilmiah dan syariat</li>
+                                            <li>Mempererat ukhuwah dan keakraban seluruh elemen KM FMIPA Unhas</li>
                                         </ul>
                                     </div>
                                     <div class="sasaran">
                                         <h5>Sasaran</h5>
-                                        <p>Panti asuhan, warga sekitar kampus, dan keluarga besar FMIPA Unhas</p>
+                                        <p>Anggota KM FMIPA Unhas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Pamflet Syiar Islam -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="program-item h-100">
+                        <div class="program-photo">
+                            <img src="{{ asset('assets/img/about/rohis/islamic.jpeg') }}" alt="Pamflet Syiar Islam BEM FMIPA Unhas" width="600" height="260" class="img-fluid">
+                        </div>
+                        <div class="program-info">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge" style="background-color: #18181c; color: #FFE500; border: 1px solid rgba(255, 229, 0, 0.3);">Rutin Setiap Pekan</span>
+                            </div>
+                            <h4 class="program-title">Pamflet Syiar Islam</h4>
+                            <p class="program-subtitle">Publikasi Konten Dakwah, Nasihat, dan Edukasi Keislaman Berkala</p>
+                            
+                            <div class="program-detail">
+                                <div class="detail-content">
+                                    <div class="tujuan">
+                                        <h5>Tujuan Program</h5>
+                                        <ul>
+                                            <li>Menyebarkan syiar dan pengingat kebaikan islami secara konsisten setiap pekan</li>
+                                            <li>Menyediakan media literasi digital yang menguatkan spiritualitas mahasiswa</li>
+                                        </ul>
+                                    </div>
+                                    <div class="sasaran">
+                                        <h5>Sasaran</h5>
+                                        <p>Civitas Akademika FMIPA Unhas dan Masyarakat Umum</p>
                                     </div>
                                 </div>
                             </div>

@@ -12,8 +12,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/logokmfterbaru.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('assets/img/logokmfterbaru.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,17 +82,17 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown"><a href="#"><span>Bidang & Biro</span> <i
+                    <li class="dropdown"><a href="#"><span>Bidang Kerja</span> <i
                                 class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
                             <li><a href="/about/inti">Struktur Inti</a></li>
                             <li><a href="/about/dewan">Dewan Mahasiswa (DPM)</a></li>
                             <li><a href="/about/pengaderan">Bidang Pengaderan</a></li>
-                            <li><a href="/about/rohis">Bidang Kerohanian</a></li>
-                            <li><a href="/about/akademik">Bidang Akademik & Riset</a></li>
-                            <li><a href="/about/miba">Bidang Minat & Bakat</a></li>
-                            <li><a href="/about/eksternal">Bidang Hubungan Eksternal</a></li>
-                            <li><a href="/about/kesek">Biro Kesekretariatan</a></li>
+                            <li><a href="/about/advokasi">Bidang Kajian Strategis & Advokasi</a></li>
+                            <li><a href="/about/humas">Bidang Hubungan Masyarakat</a></li>
+                            <li><a href="/about/akademik">Bidang Akademik & Kemahasiswaan</a></li>
+                            <li><a href="/about/kesek">Bidang Kesekretariatan</a></li>
+                            <li><a href="/about/rohis">Bidang Kerohanian Islam</a></li>
                         </ul>
                     </li>
 
@@ -274,12 +274,12 @@
                     <div class="col-lg-2 col-md-3 col-6 footer-links">
                         <h4 style="color: #FFE500; font-size: 13px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">Keluarga MIPA</h4>
                         <ul style="list-style: none; padding: 0; line-height: 2;">
-                            <li><a href="https://math.sci.unhas.ac.id/" target="_blank" style="color: #a1a1aa; font-size: 13px;">HIMATIKA Unhas</a></li>
-                            <li><a href="https://himastat.sci.unhas.ac.id/" target="_blank" style="color: #a1a1aa; font-size: 13px;">HIMASTAT Unhas</a></li>
-                            <li><a href="https://kimia.sci.unhas.ac.id/" target="_blank" style="color: #a1a1aa; font-size: 13px;">HMK FMIPA</a></li>
-                            <li><a href="https://fisika.sci.unhas.ac.id/" target="_blank" style="color: #a1a1aa; font-size: 13px;">HIMAFI Unhas</a></li>
-                            <li><a href="https://geofisika.sci.unhas.ac.id/" target="_blank" style="color: #a1a1aa; font-size: 13px;">HMGF Unhas</a></li>
-                            <li><a href="https://biologi.sci.unhas.ac.id/" target="_blank" style="color: #a1a1aa; font-size: 13px;">HIMBIO FMIPA</a></li>
+                            <li><a href="https://himatikafmipaunhas.id" target="_blank" style="color: #a1a1aa; font-size: 13px;">HIMATIKA Unhas</a></li>
+                            <li><a href="https://himastat.sci.unhas.ac.id" target="_blank" style="color: #a1a1aa; font-size: 13px;">HIMASTAT Unhas</a></li>
+                            <li><a href="https://sl1nk.com/p2fr9su" target="_blank" style="color: #a1a1aa; font-size: 13px;">HMK FMIPA</a></li>
+                            <li><a href="https://himafi.sci.unhas.ac.id" target="_blank" style="color: #a1a1aa; font-size: 13px;">HIMAFI Unhas</a></li>
+                            <li><a href="https://hmgf.sci.unhas.ac.id" target="_blank" style="color: #a1a1aa; font-size: 13px;">HMGF Unhas</a></li>
+                            <li><a href="https://himbiofmipaunhas001.blogspot.com" target="_blank" style="color: #a1a1aa; font-size: 13px;">HIMBIO FMIPA</a></li>
                         </ul>
                     </div>
 

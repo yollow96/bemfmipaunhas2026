@@ -96,9 +96,16 @@ Route::get('/about/miba', function () {
     $miba = App\Models\Pengurus::where('struktur_organisasi', 'MinatDanBakat')->get();
     return view('about.miba', ['miba' => $miba]);
 });
+Route::get('/about/advokasi', function () {
+    $advokasi = App\Models\Pengurus::where('struktur_organisasi', 'Eksternal')->get();
+    return view('about.advokasi', ['advokasi' => $advokasi]);
+});
+Route::get('/about/humas', function () {
+    $humas = App\Models\Pengurus::where('struktur_organisasi', 'Eksternal')->get();
+    return view('about.humas', ['humas' => $humas]);
+});
 Route::get('/about/eksternal', function () {
-    $eksternal = App\Models\Pengurus::where('struktur_organisasi', 'Eksternal')->get();
-    return view('about.eksternal', ['eksternal' => $eksternal]);
+    return redirect('/about/humas');
 });
 Route::get('/about/inti', function () {
     $pengurusInti = App\Models\Pengurus::where('struktur_organisasi', 'inti')->get();

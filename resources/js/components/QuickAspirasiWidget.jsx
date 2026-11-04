@@ -171,7 +171,7 @@ export default function QuickAspirasiWidget() {
                                         Aspirasi Berhasil Terkirim
                                     </div>
                                     <p style={{ fontSize: '13px', color: '#a1a1aa', margin: 0 }}>
-                                        Terima kasih. Masukan Anda akan diproses oleh Biro Advokasi & Kebijakan Kampus.
+                                        Terima kasih. Masukan Anda akan ditindaklanjuti oleh Bidang Kajian Strategis & Advokasi.
                                     </p>
                                 </div>
                             ) : (

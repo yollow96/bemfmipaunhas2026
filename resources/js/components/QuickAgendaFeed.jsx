@@ -4,44 +4,44 @@ export default function QuickAgendaFeed() {
     const agendas = [
         {
             id: 1,
-            judul: 'MIPA Scientific Competition (MSC) 2026',
-            kategori: 'Kompetisi Sains',
-            tanggal: '15 - 18 Nov 2026',
-            lokasi: 'Auditorium Prof. Mattulada / Daring',
-            status: 'Pendaftaran Dibuka',
-            deskripsi: 'Kompetisi karya tulis ilmiah, olimpiade matematika, dan inovasi sains terapan tingkat nasional.'
+            judul: 'PROGRESIP 2026',
+            kategori: 'Pengaderan',
+            tanggal: 'Triwulan I 2026',
+            lokasi: 'FMIPA Unhas / Wilayah Makassar & Gowa',
+            status: 'Segera Hadir',
+            deskripsi: 'Proses pengaderan dan sosialisasi ikhwal perjuangan untuk menanamkan pemahaman kelembagaan bagi mahasiswa FMIPA Unhas.'
         },
         {
             id: 2,
-            judul: 'Latihan Kepemimpinan Mahasiswa (LKM) FMIPA',
-            kategori: 'Kaderisasi',
-            tanggal: '24 - 26 Nov 2026',
-            lokasi: 'Malino, Kab. Gowa',
-            status: 'Segera Hadir',
-            deskripsi: 'Pelatihan kepemimpinan, advokasi, analisis sosial, dan manajemen organisasi bagi kader penerus.'
+            judul: 'Agora MIPA',
+            kategori: 'Kastrat & Advokasi',
+            tanggal: 'Triwulan II 2026',
+            lokasi: 'Pelataran & Aula FMIPA Unhas',
+            status: 'Persiapan',
+            deskripsi: 'Wadah dialektika terbuka, kajian isu strategis kemahasiswaan, dan advokasi fasilitas akademik kampus.'
         },
         {
             id: 3,
-            judul: 'Dialog Terbuka: Advokasi Fasilitas & Beasiswa UKT',
-            kategori: 'Advokasi & Akademik',
-            tanggal: '02 Des 2026',
-            lokasi: 'Aula Dekanat FMIPA Unhas',
-            status: 'Terjadwal',
-            deskripsi: 'Ruang dialog interaktif pimpinan dekanat bersama mahasiswa terkait sarana laboratorium dan UKT.'
+            judul: 'MIPA Mengabdi',
+            kategori: 'Humas & Pengabdian',
+            tanggal: 'Triwulan II 2026',
+            lokasi: 'Masyarakat Binaan / Daerah Sasaran',
+            status: 'Perencanaan',
+            deskripsi: 'Program dedikasi sosial kemasyarakatan sebagai manifestasi Tri Dharma Perguruan Tinggi oleh mahasiswa FMIPA Unhas.'
         },
         {
             id: 4,
-            judul: 'MIPA Sports & E-Sports Championship',
-            kategori: 'Minat & Bakat',
-            tanggal: '10 - 14 Des 2026',
-            lokasi: 'GOR PKM Unhas Tamalanrea',
-            status: 'Persiapan',
-            deskripsi: 'Ajang perebutan piala bergilir antar-departemen dalam cabang olahraga dan turnamen esports.'
+            judul: 'SIGMA & SINTESIS 2026',
+            kategori: 'Kerohanian Islam',
+            tanggal: 'Triwulan II 2026',
+            lokasi: 'Musholla FMIPA / Daring',
+            status: 'Terjadwal',
+            deskripsi: 'Studi Islam Generasi Muslim MIPA dan sinergi sains keislaman dalam memperkokoh moral dan ukhuwah civitas akademika.'
         }
     ];
 
     const [selectedTab, setSelectedTab] = useState('Semua');
-    const tabs = ['Semua', 'Kompetisi Sains', 'Kaderisasi', 'Advokasi & Akademik', 'Minat & Bakat'];
+    const tabs = ['Semua', 'Pengaderan', 'Kastrat & Advokasi', 'Humas & Pengabdian', 'Kerohanian Islam'];
 
     const filteredAgendas = selectedTab === 'Semua'
         ? agendas

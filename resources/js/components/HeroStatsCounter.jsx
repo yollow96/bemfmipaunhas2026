@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 export default function HeroStatsCounter() {
     const stats = [
         { label: 'Departemen Sains', value: 6, suffix: '', desc: 'Matematika, Fisika, Kimia, Biologi, Geofisika, Statistika' },
-        { label: 'Program Studi', value: 10, suffix: '+', desc: 'Jenjang S1 & Pascasarjana Terakreditasi' },
-        { label: 'Mahasiswa Aktif', value: 3500, suffix: '+', desc: 'Keluarga Mahasiswa FMIPA Unhas' },
-        { label: 'Bidang & Biro Kerja', value: 8, suffix: '', desc: 'Pelayanan aspirasi & kaderisasi terpadu' }
+        { label: 'Bidang Kerja BEM', value: 6, suffix: '', desc: 'Pengaderan, Kastrat, Humas, Akademik, Kesekretariatan, Rohis' },
+        { label: 'Program Kerja 2026', value: 10, suffix: '', desc: 'PROGRESIP, Agora MIPA, MIPA Mengabdi, Harmonia, SIGMA, dll.' },
+        { label: 'Mahasiswa Aktif', value: 1000, suffix: '+', desc: 'Keluarga Mahasiswa FMIPA Universitas Hasanuddin' }
     ];
 
     const [counts, setCounts] = useState(stats.map(() => 0));
